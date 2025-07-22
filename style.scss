@@ -36,6 +36,7 @@ $color-kids: #3498db;
 $font-ubuntu: 'Ubuntu', sans-serif;
 $font-lato: 'Lato', sans-serif;
 $font-onest: 'Onest', sans-serif;
+$font-onest-semibold: 600;
 $font-ubuntu-regular: 400;
 $font-ubuntu-light: 300;
 $font-ubuntu-medium: 500;
@@ -1168,6 +1169,481 @@ body {
 
   }
 }
+/*СТРАНИЦА EVENT CARD*/
+/*BREADCRUMB*/
+.breadcrumb-section {
+  margin-top: 150px;
+  @media (max-width:  500px) {
+    margin-top: 70px;
+  }
+}
+.breadcrumb {
+
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 14px;
+  line-height: 114%;
+  color: #838383;
+  .breadcrumb-item {
+    padding-left: 0;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "•";
+    color: #888;
+    padding: 0 6px;
+  }
+
+  a {
+    color: #777;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    color: #4b4b4b;
+    font-weight: 500;
+  }
+}
+
+
+
+.event-page-card {
+  background: #f2f2f2;
+  border-radius: 24px;
+  padding: 24px;
+  @media (max-width:  500px) {
+    padding: 16px;
+  }
+
+  img {
+    border-radius: 18px;
+    height: auto;
+    @media (max-width:  500px) {
+     width: 100%;
+    }
+  }
+  .button-all .btn {
+    @media (max-width:  500px) {
+      width: 100%;
+    }
+  }
+
+}
+.event-meta  p{
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 24px;
+  line-height: 133%;
+  color: $color-dark-grey-text;
+  @media (max-width:  500px) {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  span {
+    color: $color-dark;
+  }
+
+}
+.event-title {
+  font-family: $font-lato;
+  font-weight: $font-lato-bold;
+  font-size: 48px;
+  line-height: 100%;
+  color: #171717;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  @media (max-width:  500px) {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  span  {
+    margin-left: 15px;
+    font-family: $font-onest;
+    font-weight: $font-onest-semibold;
+    border-radius: 16px;
+    padding: 7px 8px;
+    background: #ef2b00;
+    font-size: 14px;
+    line-height: 130%;
+    color: $color-white!important;
+  }
+}
+.event-duration {
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 14px;
+  line-height: 114%;
+  color: $color-dark-grey-text;
+  margin-bottom: 24px;
+}
+.event-description {
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 16px;
+  line-height: 125%;
+  color: $color-dark;
+  @media (max-width:  500px) {
+    font-size: 14px;
+  }
+}
+.event-price {
+  font-family: $font-lato;
+  font-weight: $font-lato-bold;
+  font-size: 24px;
+  line-height: 133%;
+  color: #000;
+  @media (max-width:  1200px) {
+    font-size: 16px;
+  }
+  @media (max-width:  500px) {
+    margin: 16px 0;
+    text-align: left;
+  }
+}
+.service-text {
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 14px;
+  line-height: 114%;
+  color: #564dbb;
+  border-bottom: 1px dashed #564dbb;
+
+}
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 14px;
+  line-height: 114%;
+  color: #564dbb!important;
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    background-image: url("img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s ease;
+
+  }
+
+  &[aria-expanded="true"] {
+    .read-more__icon {
+      background-image: url("img/arrow-up.svg");
+    }
+  }
+}
+/* Отображаем скрытый текст описания как инлайн при раскрытии */
+#collapseDesc.show {
+  display: inline;
+}
+
+/* Скрываем многоточие при раскрытом описании */
+#collapseDesc.show + .dots {
+  display: none;
+}
+.event-organizer {
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  font-size: 18px;
+  line-height: 111%;
+  color: $color-dark-grey-text;
+  @media (max-width:  500px) {
+    font-size: 9px;
+  }
+  span {
+    color:$color-dark;
+  }
+}
+
+
+/*TIME TABLE*/
+
+.schedule-section {
+  background-color: #fff;
+
+  &__title {
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+
+    font-size: 36px;
+    line-height: 133%;
+    color: #171717;
+  }
+}
+
+.schedule-list {
+  &__more {
+    .schedule-item:last-of-type {
+      border-bottom: none!important;
+    }
+    // ничего специально не нужно, по умолчанию скрыт через d-none
+  }
+}
+
+.schedule-item {
+  border-color: #e4e4e4;
+
+  &__date {
+
+    display: flex;
+
+    align-items: center;
+    line-height: 1;
+  }
+  &__day {
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    font-size: 48px;
+    line-height: 100%;
+    color: $color-dark;
+    margin-right: 12px;
+    @media (max-width: 767.98px) {
+      font-size: 32px;
+    }
+  }
+  &__month {
+    text-align: left;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 18px;
+    line-height: 111%;
+    color: $color-dark;
+    @media (max-width: 767.98px) {
+      font-size: 14px;
+    }
+  }
+  &__week-day {
+    text-align: left;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+    line-height: 143%;
+    color: $color-dark-grey-text;
+    @media (max-width: 767.98px) {
+      font-size: 10px;
+    }
+  }
+
+  &__time {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 24px;
+    line-height: 133%;
+    color: $color-dark;
+  }
+  &__city {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+    line-height: 143%;
+    color: $color-dark-grey-text;
+  }
+  &__city.mobile {
+    font-size: 10px;
+  }
+  &__venue {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+    line-height: 143%;
+    color: $color-dark-grey-text;
+  }
+  &__venue.mobile {
+    font-size: 10px;
+  }
+
+  &__price.button-all {
+    flex-direction: column;
+    .btn {
+      @media (max-width: 767.98px) {
+        max-width: 117px;
+      }
+
+    }
+
+
+
+  }
+}
+
+.schedule-toggle {
+  background: rgba(11, 13, 18, 0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 114%;
+  color: #fff;
+
+  .toggle-icon {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+}
+
+/*GALLERY*/
+.gallery-section {
+  margin-bottom: 48px;
+  .gallery-title {
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    font-size: 36px;
+    line-height: 133%;
+    color: $color-dark;
+  }
+  .swiper-slide {
+    width: auto;
+    max-width: 220px;
+
+    a {
+      display: block;
+
+      img {
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    border-radius: 6px;
+    padding: 12px 4px;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+
+    &::after {
+      display: none;
+
+    }
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .swiper-button-prev {
+    left: -10px;
+  }
+
+  .swiper-button-next {
+    right: -10px;
+  }
+}
+/*LOCAL*/
+
+.location-section {
+  margin-bottom: 48px;
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__map {
+    height: 388px;
+    border-radius: 24px;
+
+  }
+  &__map iframe {
+    border: 0;
+    border-radius: 1rem;
+  }
+  &__local-name {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-bold;
+    font-size: 18px;
+    line-height: 111%;
+    color: $color-dark;
+    margin-bottom: 16px;
+  }
+  &__address {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 18px;
+    line-height: 111%;
+    color: $color-dark;
+    margin-bottom: 16px;
+  }
+  &__number {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 18px;
+    line-height: 111%;
+    color: $color-dark;
+    margin-bottom: 16px;
+  }
+
+  .btn-light-purple {
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    background-color: #f4edff;
+    color: #6a3fcf;
+    padding: 10px 16px;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #e9ddff;
+      color: #5a32ba;
+    }
+  }
+}
+
+.recommend-event__title {
+  font-family: $font-lato;
+  font-weight: $font-lato-bold;
+  font-size: 36px;
+  line-height: 133%;
+  color: #171717;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767.98px) {
+  .event-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .event-footer .text-end {
+    align-items: flex-start !important;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .event-card img {
+    height: auto;
+  }
+}
+
+
+
 
 
 @media (min-width: 1400px) {

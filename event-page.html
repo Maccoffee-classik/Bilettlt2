@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bilettlt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@500;700;900&family=Onest:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+
+</head>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<body>
+
+
+<header class="header fixed-top">
+    <div class="container header__container">
+        <div class="header__left">
+            <a href="#" class="header__logo"><img src="img/logo-bilettlt.png" alt="Логотип"></a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="#">Площадки</a></li>
+                    <li class="header__menu-item"><a href="#">Новости</a></li>
+                    <li class="header__menu-item"><a href="#">Кассы</a></li>
+                </ul>
+                <form action="#" class="header__search">
+                    <input type="text" placeholder="Поиск по названию" class="header__search-input">
+                    <button type="submit" class="header__search-btn"><img src="img/search-ico.svg" alt="search-ico"></button>
+                </form>
+            </nav>
+        </div>
+        <div class="header__right">
+
+            <div class="header__phone">+7 (8482) 39-89-89</div>
+            <div class="header__city">
+                <span class="header__city-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2834 1.18962C14.3552 0.787673 15.402 1.83437 15 2.90622L10.7148 14.3333C10.2383 15.6041 8.38923 15.4334 8.15336 14.0969L7.24429 8.94533L2.09276 8.03627C0.756208 7.8004 0.585535 5.95131 1.85631 5.47477L13.2834 1.18962ZM13.7516 2.43805L2.32448 6.7232L7.47596 7.63233C8.02783 7.72967 8.45989 8.16173 8.55729 8.7136L9.46643 13.8651L13.7516 2.43805Z" fill="white" />
+                    </svg>
+                </span>
+                <span class="header__city-name">Тольятти</span>
+                <span class="header__city-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M2.8536 4.85535C2.65834 5.0506 2.65834 5.3672 2.8536 5.56245L5.2997 8.00615C5.6903 8.39635 6.3232 8.3962 6.7136 8.00585L9.15875 5.56065C9.35405 5.3654 9.35405 5.0488 9.15875 4.85354C8.9635 4.65828 8.6469 4.65828 8.45165 4.85354L6.35885 6.94635C6.1636 7.14165 5.847 7.1416 5.65175 6.94635L3.56071 4.85535C3.36545 4.66008 3.04886 4.66008 2.8536 4.85535Z" fill="white" />
+                     </svg>
+                </span>
+            </div>
+            <button class="header__btn bookmark-btn  d-none d-md-flex "> </button>
+            <button class="header__burger navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Меню">
+                                        <span class="navbar-toggler-icon"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.666016 1H11.3327M0.666016 5H11.3327M0.666016 9H11.3327" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></span>
+            </button>
+        </div>
+    </div>
+</header>
+<section class="breadcrumb-section ">
+<div class="container my-3">
+    <div class="d-flex justify-content-between flex-wrap align-items-center gap-2">
+
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item"><a href="#">Все события</a></li>
+                <li class="breadcrumb-item active" aria-current="page">КняZz. Ангел и Демон</li>
+            </ol>
+        </nav>
+
+        <!-- Теги -->
+        <div class="slider__tags">
+            <span class=" tag slider__tag  purple slider__tag ">Пушкинская карта</span>
+            <span class=" tag slider__tag orange slider__tag ">Юмор</span>
+            <span class=" tag slider__tag  blue slider__tag ">Детям</span>
+
+        </div>
+    </div>
+</div>
+</section>
+
+
+<div class="container ">
+    <div class="event-page-card  overflow-hidden">
+        <div class="row g-0">
+            <div class="col-12 col-md-3 col-lg-4 col-xl-3 col-xxl-2">
+                <img src="img/knyazz.png" alt="Афиша концерта «КняZz. Ангел и Демон»" class="img-fluid object-fit-cover">
+            </div>
+            <div class="col-12 col-md-9 col-lg-8 col-xl-9 col-xxl-10 d-flex flex-column p-0 pt-1 p-md-4">
+                <div class="event-meta text-muted mb-2">
+                    <p><span>31 мая, 19:00 </span>&middot; КЦ «Автоград» </p>
+                </div>
+                <h3 class="event-title">
+                    КняZz. Ангел и Демон <span class="text-muted">13+</span>
+                </h3>
+                <div class="event-duration ">
+                    Продолжительность: 1&nbsp;ч.&nbsp;20&nbsp;мин.
+                </div>
+                <p class="event-description mb-2">
+                    Новый тур группы «КняZz» получил название «Ангел и Демон» по одноимённой песне со второго номерного альбома коллектива «Тайна кривых зеркал». Песня о борьбе двух мистических созданий из светлого и тёмного мира за право быть вместе.<br><br>Программа будет состоять из лучших песен со всех альбомов группы «КняZz» с упором на новый материал. И обязательно прозвучат хиты Андрея Князева из репертуара легендарной группы «Король и Шут».<span id="collapseDesc" class="collapse"><br><br>По словам автора, сет-лист будет значительно отличаться от предыдущей программы 2024 года, получившей название «Волшебная книга». Группа активно работает над аранжировками существующих песен, чтобы придать им современное звучание и насытить музыку новыми интересными элементами. Помимо всеми любимых хитов в программу войдут и те песни, которые поклонники на концертах слышали нечасто.<br><br>Андрей Князев продолжает активную работу над видео-оформлением выступлений, и зритель сможет увидеть на экране персонажей любимых песен, выполненных автором в 3D графике. Стадионные концерты с программой «Ангел и Демон» будут включать в себя дополнительные элементы шоу, чтобы усилить атмосферу погружения зрителя в сказочный мир. Вишенкой на торте будет важное юбилейное событие у группы «КняZz» в 2025 году - 15 лет с момента образования коллектива.<br><br>Это достаточно зрелый возраст для рок-группы, и музыканты планируют показать зрителю должный уровень выступления. Как всегда, будет приветствоваться пение зала. Коллектив группы «КняZz» будет рад видеть всех своих слушателей! И для новых зрителей двери в сказочный мир Андрея Князева всегда открыты!</span><span class="dots">...</span>
+                </p>
+                <a href="#collapseDesc"
+                   class="read-more text-primary text-decoration-none"
+                   data-bs-toggle="collapse"
+                   role="button"
+                   aria-expanded="false"
+                   aria-controls="collapseDesc">
+                    <span class="read-more__text">Читать дальше</span>
+                    <span class="read-more__icon"></span>
+                </a>
+                <div class="event-footer mt-auto pt-3 d-flex justify-content-between align-items-sm-center align-items-start">
+                    <div class="service-text">Сервисный сбор при покупке билетов</div>
+                    <div class="text-end button-all m-0 align-items-center">
+                        <span class="event-price ">от&nbsp;2&nbsp;500 до&nbsp;10&nbsp;000&nbsp;₽</span>
+                        <a href="#" class="btn ms-0 ms-md-3 ">Купить билет</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event-organizer mt-3 mb-3 ">
+        <span>Организатор</span> ОАО «ДК «Тольятти» имени Н.В. Абрамова<span> ОГРН </span>1046301051532
+    </div>
+</div>
+
+
+<section class="schedule-section py-5">
+    <div class="container">
+        <h2 class="schedule-section__title mb-4">Расписание</h2>
+
+        <!-- Расписание элементы -->
+        <div class="schedule-list">
+
+            <!-- Item 1 (always visible) -->
+            <div class="schedule-item d-flex align-items-center py-3 py-md-4 border-bottom">
+                <div class="schedule-item__date d-flex text-center flex-grow-1 pe-3">
+                    <div class="schedule-item__day">31</div>
+                    <div class="schedule-item__info d-flex flex-column">
+                        <div class="schedule-item__month ">мая</div>
+                        <div class="schedule-item__week-day">Понедельник</div>
+                    </div>
+                </div>
+                <div class="schedule-item__time flex-grow-1">19:00</div>
+                <div class="schedule-item__city flex-grow-1 text-muted d-none d-md-block">Тольятти</div>
+                <div class="schedule-item__venue flex-grow-1 text-muted d-none d-md-block">КЦ «Автоград»</div>
+                <div class="button-all schedule-item__price order-3 order-md-0">
+                    <a class="btn ">от 2 500 ₽</a>
+                    <div class="align-items-center d-flex gap-1 w-100 justify-content-end d-md-none text-muted mt-1">
+                        <div class="schedule-item__city mobile">Тольятти</div>
+                        <div>•</div>
+                        <div class="schedule-item__venue mobile">КЦ «Автоград»</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Скрытые элементы -->
+            <div class="schedule-list__more d-none">
+                <div class="schedule-item d-flex align-items-center py-3 py-md-4 border-bottom">
+                    <div class="schedule-item__date d-flex text-center flex-grow-1 pe-3">
+                        <div class="schedule-item__day">01</div>
+                        <div class="schedule-item__info d-flex flex-column">
+                            <div class="schedule-item__month ">июня</div>
+                            <div class="schedule-item__week-day">Вторник</div>
+                        </div>
+                    </div>
+                    <div class="schedule-item__time flex-grow-1">19:00</div>
+                    <div class="schedule-item__city flex-grow-1 text-muted d-none d-md-block">Тольятти</div>
+                    <div class="schedule-item__venue flex-grow-1 text-muted d-none d-md-block">КЦ «Автоград»</div>
+                    <div class="button-all schedule-item__price order-3 order-md-0">
+                        <a class="btn ">от 2 500 ₽</a>
+                        <div class="align-items-center d-flex gap-1 w-100 justify-content-end d-md-none text-muted mt-1">
+                            <div class="schedule-item__city mobile">Тольятти</div>
+                            <div>•</div>
+                            <div class="schedule-item__venue mobile">КЦ «Автоград»</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="schedule-item d-flex align-items-center py-3 py-md-4 border-bottom">
+                    <div class="schedule-item__date d-flex text-center flex-grow-1 pe-3">
+                        <div class="schedule-item__day">01</div>
+                        <div class="schedule-item__info d-flex flex-column">
+                            <div class="schedule-item__month ">июня</div>
+                            <div class="schedule-item__week-day">Вторник</div>
+                        </div>
+                    </div>
+                    <div class="schedule-item__time flex-grow-1">22:00</div>
+                    <div class="schedule-item__city flex-grow-1 text-muted d-none d-md-block">Тольятти</div>
+                    <div class="schedule-item__venue flex-grow-1 text-muted d-none d-md-block">КЦ «Автоград»</div>
+                    <div class="button-all schedule-item__price order-3 order-md-0">
+                        <a class="btn ">от 2 500 ₽</a>
+                        <div class="align-items-center d-flex gap-1 w-100 justify-content-end d-md-none text-muted mt-1">
+                            <div class="schedule-item__city mobile">Тольятти</div>
+                            <div>•</div>
+                            <div class="schedule-item__venue mobile">КЦ «Автоград»</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="schedule-item d-flex align-items-center py-3 py-md-4 border-bottom">
+                    <div class="schedule-item__date d-flex text-center flex-grow-1 pe-3">
+                        <div class="schedule-item__day">02</div>
+                        <div class="schedule-item__info d-flex flex-column">
+                            <div class="schedule-item__month ">июня</div>
+                            <div class="schedule-item__week-day">Среда</div>
+                        </div>
+                    </div>
+                    <div class="schedule-item__time flex-grow-1">19:00</div>
+                    <div class="schedule-item__city flex-grow-1 text-muted d-none d-md-block">Тольятти</div>
+                    <div class="schedule-item__venue flex-grow-1 text-muted d-none d-md-block">КЦ «Автоград»</div>
+                    <div class="button-all schedule-item__price order-3 order-md-0">
+                        <a class="btn ">от 1 500 ₽</a>
+                        <div class="align-items-center d-flex gap-1 w-100 justify-content-end d-md-none text-muted mt-1">
+                            <div class="schedule-item__city mobile">Тольятти</div>
+                            <div>•</div>
+                            <div class="schedule-item__venue mobile">КЦ «Автоград»</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="schedule-item d-flex align-items-center py-3 py-md-4 border-bottom">
+                    <div class="schedule-item__date d-flex text-center flex-grow-1 pe-3">
+                        <div class="schedule-item__day">03</div>
+                        <div class="schedule-item__info d-flex flex-column">
+                            <div class="schedule-item__month ">июня</div>
+                            <div class="schedule-item__week-day">Четверг</div>
+                        </div>
+                    </div>
+                    <div class="schedule-item__time flex-grow-1">19:00</div>
+                    <div class="schedule-item__city flex-grow-1 text-muted d-none d-md-block">Тольятти</div>
+                    <div class="schedule-item__venue flex-grow-1 text-muted d-none d-md-block">КЦ «Автоград»</div>
+                    <div class="button-all schedule-item__price order-3 order-md-0">
+                        <a class="btn ">от 2 500 ₽</a>
+                        <div class="align-items-center d-flex gap-1 w-100 justify-content-end d-md-none text-muted mt-1">
+                            <div class="schedule-item__city mobile">Тольятти</div>
+                            <div>•</div>
+                            <div class="schedule-item__venue mobile">КЦ «Автоград»</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="text-start mt-4">
+                <button class="btn btn-secondary btn-sm schedule-toggle" type="button">
+                    <span class="toggle-text">Все расписание</span><img class="toggle-icon" src="img/arrow-down-white.svg"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="gallery-title mb-4">Галерея</h2>
+        <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="img/gallery-1.png" class="glightbox">
+                        <img src="img/gallery-1.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2.png" class="glightbox">
+                        <img src="img/gallery-2.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-3.png" class="glightbox">
+                        <img src="img/gallery-3.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-4.png" class="glightbox">
+                        <img src="img/gallery-4.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-5.png" class="glightbox">
+                        <img src="img/gallery-5.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-6.png" class="glightbox">
+                        <img src="img/gallery-6.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-7.png" class="glightbox">
+                        <img src="img/gallery-7.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-1.png" class="glightbox">
+                        <img src="img/gallery-1.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2.png" class="glightbox">
+                        <img src="img/gallery-2.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-3.png" class="glightbox">
+                        <img src="img/gallery-3.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Навигация -->
+            <div class="swiper-button-prev">
+                <img src="img/swiper-button-prev.svg" alt="Назад">
+            </div>
+            <div class="swiper-button-next">
+                <img src="img/swiper-button-next.svg" alt="Вперед">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="location-section ">
+    <div class="container">
+        <h2 class="location-section__title mb-4">Адрес</h2>
+        <div class="row g-4 align-items-start">
+            <!-- Карта -->
+            <div class="col-md-7">
+                <div class="location-section__map ratio ratio-16x9  overflow-hidden">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A32f93f2430bb04ec65367697fffdddd971b04eda6b1ff65cd573a2cc15610cd5&amp;source=constructor" width="774" height="388" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Адрес -->
+            <div class="col-md-5">
+                <div class="location-section__info">
+                    <p class="location-section__local-name">КЦ «Автоград»</p>
+                    <p class="location-section__address">г. Тольятти, ул. Юбилейная, 8</p>
+                    <p class="location-section__number">+7 (8482) 39-89-89</p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#" class="btn btn-light-purple">Добавить в Яндекс.Навигатор</a>
+                        <a href="#" class="btn btn-light-purple">Добавить в 2Gis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <h2 class="recommend-event__title">Рекомендуемые события</h2>
+<!-- Сетка карточек событий -->
+<div class="row g-3 mb-3 row-xxl-5-cols">
+    <!-- Карточка события -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/knyazz.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 " >
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag purple ">Пушкинская карта</button>
+                    <button type="button" class="tag blue">Детям</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">КняZz. Ангел и Демон</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/zara.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Зара</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/mishel.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Моя Мишель</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 5 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card event-card-cancelled">
+            <div class="card-img-container position-relative">
+                <img src="img/virt.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Виртуозы России</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 5 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+            </div>
+        </div>
+    </div>
+    <!-- Дополнительные карточки аналогично -->
+
+
+
+    <!-- Карточка события -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/marshal.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Александр Маршал </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 1 800 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/beburishvili.jpg" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Андрей Бебуришвили            Stand Up</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/sherbakov.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Standup Алексей Щербаков
+                </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 3 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/sati.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Sati </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Дополнительные карточки аналогично -->
+
+
+
+
+
+
+    <!-- Карточка события -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/simf.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag purple">Пушкинская карта</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Симфонические РОК-ХИТЫ Лучшее CONCORD ORCHESTRA</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 1 800 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/eva.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Ева Польна                    </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card event-card-cancelled">
+            <div class="card-img-container position-relative">
+                <img src="img/zveri.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Звери</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/master.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Мастер и Маргарита</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Дополнительные карточки аналогично -->
+
+
+
+
+
+
+
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/radio.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Radio Queen. Шоу «Богемская рапсодия» в сопровождении симфонического оркестра </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 1 800 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/orkestr.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Оркестр CAGMO - Симфония System Of A Down при свечах</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/shou.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">3 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Шоу под дождём V. Признание в любви
+                </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 3 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/svidanie.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">3 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Свидание на четверых
+                </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card vertical-banner">
+
+            <img  src="img/vertical_banner.png" alt="vertical_banner">
+
+        </div>
+    </div>
+
+
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/zara.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Зара</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/mishel.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Моя Мишель</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 5 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card event-card-cancelled">
+            <div class="card-img-container position-relative">
+                <img src="img/virt.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">31 мая, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Виртуозы России</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 5 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+            </div>
+        </div>
+    </div>
+    <!-- Дополнительные карточки аналогично -->
+
+
+
+    <!-- Карточка события -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/marshal.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Александр Маршал </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 1 800 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/beburishvili.jpg" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Андрей Бебуришвили            Stand Up</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/sherbakov.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Standup Алексей Щербаков
+                </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 3 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/sati.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Sati </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 col-12 d-block d-xxl-none">
+        <div class="banner-block">
+            <img  src="img/horisontal_banner2.png" alt="horisontal_banner2">
+        </div>
+    </div>
+
+    <!-- Карточка события -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/simf.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag purple">Пушкинская карта</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Симфонические РОК-ХИТЫ Лучшее CONCORD ORCHESTRA</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 1 800 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/eva.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Ева Польна                    </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card event-card-cancelled">
+            <div class="card-img-container position-relative">
+                <img src="img/zveri.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Звери</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+
+                <span class="status-cancelled">Отменен</span>
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/master.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Мастер и Маргарита</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Дополнительные карточки аналогично -->
+    <!-- Карточка события -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card ">
+            <div class="card-img-container position-relative">
+                <img src="img/marshal.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">1 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Александр Маршал </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 1 800 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/beburishvili.jpg" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Андрей Бебуришвили            Stand Up</h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/sherbakov.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+                    <button type="button" class="tag orange">Юмор</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">2 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Standup Алексей Щербаков
+                </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 3 000 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- Еще одна карточка -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
+        <div class="card event-card">
+            <div class="card-img-container position-relative">
+                <img src="img/sati.png" class="card-img-top" alt="Event Image">
+                <button class="btn bookmark-btn position-absolute top-0 end-0 ">
+
+                </button>
+                <div class="tag-filters position-absolute bottom-0 start-0">
+
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="event-datetime">3 июня, 19:00 <img src="img/event-datetime-dot.svg" alt="event-datetime-dot"> КЦ «Автоград»</p>
+                <h5 class="card-title">Sati </h5>
+
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto ">
+                <span class="price">от 2 500 ₽</span>
+                <span class="status-cancelled">Отменен</span>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<div class="row g-3 mt-1 mt-sm-5 mb-5">
+    <div class="col-12 mt-0">
+        <div class="button-all ">
+            <button class="btn  ">Все фильтры</button>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<footer class="footer">
+    <div class="container ">
+        <div class="footer__wrapper">
+            <div class="footer__row row justify-content-between">
+                <!-- Колонка: Контакты -->
+                <div class="footer__column col-9 col-md-4 ">
+                    <div class="footer__contact d-flex align-items-center mb-4">
+                        <img src="img/logo-bilettlt.png" alt="logo" class="footer__logo me-3" width="48" height="48">
+                        <span class="footer__phone">+7 (8482) 39-89-89</span>
+                    </div>
+
+                </div>
+
+                <!-- Колонка: Информация -->
+
+
+                <!-- Соцсети -->
+                <div class="footer__column col-3 col-md-2 d-flex justify-content-end  align-items-start ">
+                    <div class="footer__social social">
+                        <a href="#" class="social__icon">
+                            <svg  class="social__svg" width="21" height="18" viewBox="0 0 21 18"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.6646 0.717003L0.934606 7.554C-0.275394 8.04 -0.268393 8.715 0.712607 9.016L5.26461 10.436L15.7966 3.791C16.2946 3.488 16.7496 3.651 16.3756 3.983L7.84261 11.684H7.84061L7.84261 11.685L7.52861 16.377C7.98861 16.377 8.19161 16.166 8.44961 15.917L10.6606 13.767L15.2596 17.164C16.1076 17.631 16.7166 17.391 16.9276 16.379L19.9466 2.151C20.2556 0.912003 19.4736 0.351003 18.6646 0.717003Z"  />
+                            </svg>
+                        </a>
+                        <a href="#" class="social__icon">
+                            <svg class="social__svg" width="24" height="14" viewBox="0 0 24 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.3941 6.74939C13.9793 6.5934 13.9793 5.99765 13.9535 5.58279C13.8498 4.10505 14.3684 1.84902 13.7461 0.889854C13.3055 0.319001 11.1789 0.371274 9.88289 0.449268C9.51947 0.501541 9.07888 0.578706 8.76774 0.734695C8.45659 0.890684 8.14544 1.14956 8.14544 1.38271C8.14544 1.71958 8.92372 1.66814 9.20832 2.10872C9.51947 2.57586 9.51947 3.58647 9.51947 4.41619C9.51947 5.37536 9.36348 6.6465 8.97517 6.69794C8.37859 6.72367 8.04172 6.12709 7.73058 5.68651C7.10828 4.83106 6.48599 3.76735 6.01885 2.73019C5.7857 2.18589 5.65543 1.58931 5.31856 1.35616C4.79998 0.99274 3.86654 0.967019 2.95882 0.99274C2.12909 1.01846 0.935941 0.914746 0.702788 1.4076C0.521078 1.9519 0.91022 2.47048 1.11765 2.9119C2.18053 5.21937 3.32141 7.24224 4.72199 9.16057C6.01885 10.9495 7.23689 12.3758 9.62236 13.1275C10.2969 13.3349 13.2524 13.9315 13.849 13.1275C14.0564 12.8164 14.005 12.1161 14.1087 11.5975C14.2124 11.0789 14.3418 10.5603 14.8347 10.5346C15.2496 10.5089 15.4827 10.8715 15.7424 11.1312C16.0278 11.4166 16.261 11.6498 16.4684 11.9095C16.9613 12.4023 17.4799 13.0761 18.1022 13.3358C18.9576 13.6992 20.2802 13.5955 21.5248 13.5432C22.5362 13.5175 23.2622 13.31 23.3402 12.7135C23.3925 12.2463 22.8731 11.5726 22.562 11.1834C21.7837 10.2243 21.4211 9.93886 20.5391 9.05686C20.1499 8.66772 19.6571 8.25285 19.6571 7.78655C19.6314 7.50112 19.8645 7.24224 20.0719 6.95682C20.9797 5.60851 21.8874 4.64935 22.7171 3.24877C22.9503 2.8339 23.4954 1.87474 23.288 1.4076C23.0548 0.889024 21.7579 1.04418 20.9539 1.04418C19.9168 1.04418 18.5685 0.966188 18.3088 1.17362C17.8159 1.51049 17.6085 2.05562 17.3753 2.5742C16.8567 3.76735 16.1565 4.98539 15.4304 5.89311C15.1707 6.20426 14.6787 6.85227 14.3933 6.74856L14.3941 6.74939Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer__row row">
+                <!-- Колонка: Контакты -->
+                <div class="footer__column  col-6  col-md-4 ">
+
+                    <h6 class="footer__title">О нас</h6>
+                    <ul class="footer__list list-unstyled">
+                        <li class="footer__item"><a href="#" class="footer__link">Публичная оферта</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Кассы</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Билетные кассы Самары</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка: Информация -->
+                <div class="footer__column col-6 col-md-4 ">
+                    <h6 class="footer__title">Полезная информация</h6>
+                    <ul class="footer__list list-unstyled">
+                        <li class="footer__item"><a href="#" class="footer__link">Как купить билет</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Сервисный сбор при покупке билетов</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Правила возврата билетов</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Отмены, Переносы Мероприятий</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка: Организаторам -->
+                <div class="footer__column  footer__margin-minus col-6  col-md-2 ">
+                    <h6 class="footer__title">Организаторам</h6>
+                    <ul class="footer__list list-unstyled">
+                        <li class="footer__item"><a href="#" class="footer__link">Рамки для афиш</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <hr class="footer__divider">
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+
+    /*BOOKMARK*/
+    document.querySelectorAll('.bookmark-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+        });
+    });
+/*TRIANGLE READ MORE*/
+    document.querySelectorAll('.read-more').forEach(link => {
+        const textEl = link.querySelector('.read-more__text');
+
+        link.addEventListener('click', () => {
+            setTimeout(() => {
+                const expanded = link.getAttribute('aria-expanded') === 'true';
+                textEl.textContent = expanded ? 'Свернуть' : 'Читать дальше';
+            }, 100); // дождаться обновления атрибута
+        });
+    });
+    /*TIME TABLE*/
+    document.querySelector('.schedule-toggle')?.addEventListener('click', function () {
+        const moreSchedule = document.querySelector('.schedule-list__more');
+        const icon = this.querySelector('.toggle-icon');
+        const text = this.querySelector('.toggle-text');
+
+        const isHidden = moreSchedule.classList.contains('d-none');
+
+        moreSchedule.classList.toggle('d-none');
+        text.textContent = isHidden ? 'Свернуть' : 'Все расписание';
+        icon.src = isHidden ? 'img/arrow-up-white.svg' : 'img/arrow-down-white.svg';
+    });
+
+/*GALLERY*/
+    const gallerySwiper = new Swiper('.gallery-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+
+</script>
+</body>
+</html>
