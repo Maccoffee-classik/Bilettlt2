@@ -9,7 +9,14 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+
 </head>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <body>
 
 
@@ -17,7 +24,7 @@
     <div class="container header__container">
 
         <div class="header__left">
-            <a href="#" class="header__logo"><img src="img/logo-bilettlt.png" alt="Логотип"></a>
+            <a href="index.html" class="header__logo"><img src="img/logo-bilettlt.png" alt="Логотип"></a>
             <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__menu-item"><a href="location.html">Площадки</a></li>
@@ -113,249 +120,162 @@
         </div>
     </div>
 </header>
+<section class="breadcrumb-section ">
+    <div class="container my-3">
+        <div class="d-flex justify-content-between flex-wrap align-items-center gap-2">
 
-<div class="offcanvas offcanvas-start mobile-menu" tabindex="-1" id="mobileMenu">
-    <div class="mobile-menu__header">
-        <a href="#" class="mobile-menu__logo"><img src="img/logo-bilettlt.png" alt="Логотип"></a>
-        <div class="mobile-menu__city">
-             <span class="header__city-icon">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2834 1.18962C14.3552 0.787673 15.402 1.83437 15 2.90622L10.7148 14.3333C10.2383 15.6041 8.38923 15.4334 8.15336 14.0969L7.24429 8.94533L2.09276 8.03627C0.756208 7.8004 0.585535 5.95131 1.85631 5.47477L13.2834 1.18962ZM13.7516 2.43805L2.32448 6.7232L7.47596 7.63233C8.02783 7.72967 8.45989 8.16173 8.55729 8.7136L9.46643 13.8651L13.7516 2.43805Z" fill="white" />
-                    </svg>
-                </span>
-            <span class="mobile-menu__city-name">Тольятти</span>
-            <span class="mobile-menu__city-arrow">&#9662;</span>
-        </div>
-        <button type="button" class="mobile-menu__close" data-bs-dismiss="offcanvas" aria-label="Закрыть">&#10005;</button>
-    </div>
-    <nav class="mobile-menu__nav">
-        <ul class="mobile-menu__list">
-            <li class="mobile-menu__item"><a href="#">Площадки</a></li>
-            <li class="mobile-menu__item"><a href="#">Новости</a></li>
-            <li class="mobile-menu__item"><a href="#">Кассы</a></li>
-        </ul>
-    </nav>
-    <div class="mobile-menu__footer">
-        <div class="mobile-menu__phone">+7 (8482) 39-89-89</div>
-        <div class="mobile-menu__socials">
-            <a href="#" class="mobile-menu__social-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.6646 3.717L2.93461 10.554C1.72461 11.04 1.73161 11.715 2.71261 12.016L7.26461 13.436L17.7966 6.791C18.2946 6.488 18.7496 6.651 18.3756 6.983L9.84261 14.684H9.84061L9.84261 14.685L9.52861 19.377C9.98861 19.377 10.1916 19.166 10.4496 18.917L12.6606 16.767L17.2596 20.164C18.1076 20.631 18.7166 20.391 18.9276 19.379L21.9466 5.151C22.2556 3.912 21.4736 3.351 20.6646 3.717Z" fill="#434343" />
-            </svg></a>
-            <a href="#" class="mobile-menu__social-icon"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.3946 6.74939C13.9797 6.5934 13.9797 5.99765 13.954 5.58279C13.8503 4.10505 14.3689 1.84902 13.7466 0.889854C13.306 0.319001 11.1794 0.371274 9.88338 0.449268C9.51996 0.501541 9.07937 0.578706 8.76822 0.734695C8.45708 0.890684 8.14593 1.14956 8.14593 1.38271C8.14593 1.71958 8.92421 1.66814 9.20881 2.10872C9.51996 2.57586 9.51996 3.58647 9.51996 4.41619C9.51996 5.37536 9.36397 6.6465 8.97566 6.69794C8.37908 6.72367 8.04221 6.12709 7.73106 5.68651C7.10877 4.83106 6.48647 3.76735 6.01934 2.73019C5.78618 2.18589 5.65592 1.58931 5.31905 1.35616C4.80047 0.99274 3.86703 0.967019 2.9593 0.99274C2.12958 1.01846 0.93643 0.914746 0.703276 1.4076C0.521566 1.9519 0.910708 2.47048 1.11814 2.9119C2.18102 5.21937 3.3219 7.24224 4.72247 9.16057C6.01934 10.9495 7.23738 12.3758 9.62284 13.1275C10.2974 13.3349 13.2529 13.9315 13.8495 13.1275C14.0569 12.8164 14.0055 12.1161 14.1092 11.5975C14.2129 11.0789 14.3423 10.5603 14.8352 10.5346C15.2501 10.5089 15.4832 10.8715 15.7429 11.1312C16.0283 11.4166 16.2615 11.6498 16.4689 11.9095C16.9618 12.4023 17.4804 13.0761 18.1027 13.3358C18.9581 13.6992 20.2807 13.5955 21.5253 13.5432C22.5367 13.5175 23.2627 13.31 23.3407 12.7135C23.393 12.2463 22.8736 11.5726 22.5624 11.1834C21.7842 10.2243 21.4216 9.93886 20.5396 9.05686C20.1504 8.66772 19.6576 8.25285 19.6576 7.78655C19.6318 7.50112 19.865 7.24224 20.0724 6.95682C20.9801 5.60851 21.8879 4.64935 22.7176 3.24877C22.9508 2.8339 23.4959 1.87474 23.2885 1.4076C23.0553 0.889024 21.7584 1.04418 20.9544 1.04418C19.9173 1.04418 18.569 0.966188 18.3093 1.17362C17.8164 1.51049 17.609 2.05562 17.3758 2.5742C16.8572 3.76735 16.1569 4.98539 15.4309 5.89311C15.1712 6.20426 14.6792 6.85227 14.3938 6.74856L14.3946 6.74939Z" fill="#434343" />
-            </svg></a>
-        </div>
-    </div>
-</div>
+            <!-- Хлебные крошки -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="location.html">Площадки</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Casanova Club</li>
+                </ol>
+            </nav>
 
-<section class="slider-section">
-    <div class="container">
-        <div id="eventCarousel" class="carousel slide slider" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
-                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
-                <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item slider__slide active">
-                    <img src="img/main_banner.png" class="d-block w-100 slider__image" alt="Слайд 1">
-                    <div class="slider__overlay"></div>
-                    <div class="slider__info">
-                        <div class="slider__content">
-                            <div class="slider__date">31 мая, 19:00 • ДК «Автоград»</div>
-                            <h3 class="slider__title">КняZz.<br>Ангел и Демон</h3>
-                            <div class="slider__price">от 2 500 ₽</div>
-                        </div>
-                        <div class="slider__tags">
-                            <span class=" tag slider__tag  purple slider__tag ">Пушкинская карта</span>
-                            <span class=" tag slider__tag orange slider__tag ">Юмор</span>
-                            <span class=" tag slider__tag  blue slider__tag ">Детям</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider__slide">
-                    <img src="img/main_banner2.png" class="d-block w-100 slider__image" alt="Слайд 2">
-                    <div class="slider__overlay"></div>
-                    <div class="slider__info">
-                        <div class="slider__content">
-                            <div class="slider__date">31 мая, 19:00 • ДК «Автоград»</div>
-                            <h3 class="slider__title ">Симфонические РОК-<br>ХИТЫ Лучшее CONCORD<br> ORCHESTRA</h3>
-                            <div class="slider__price">от 1 500 ₽</div>
-                        </div>
-                        <div class="slider__tags">
-                            <span class=" tag slider__tag  purple slider__tag ">Пушкинская карта</span>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item slider__slide">
-                    <img src="img/main_banner3.png" class="d-block w-100 slider__image" alt="Слайд 3">
-                    <div class="slider__overlay"></div>
-                    <div class="slider__info">
-                        <div class="slider__content">
-                            <div class="slider__date">31 мая, 19:00 • ДК «Автоград»</div>
-                            <h3 class="slider__title">Мастер и Маргарита</h3>
-                            <div class="slider__price">от 1 500 ₽</div>
-                        </div>
-                        <div class="slider__tags">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
         </div>
     </div>
 </section>
 
 
-
-
-
-<div class="container">
-    <!-- Фильтры -->
-    <div class="filter-block bg-purple text-white rounded-bottom-4 py-2 py-sm-3 px-1 px-md-4">
-        <div class="container">
-            <div class="row g-3 align-items-center filter-block__row">
-                <!-- События -->
-                <div class="col-md-2 col-sm-5 d-none d-sm-block">
-                    <select class="form-select filter-block__select">
-                        <option selected>События</option>
-                    </select>
-                </div>
-                <!-- Площадка -->
-                <div class="col-md-2 col-sm-5 d-none d-sm-block">
-                    <select class="form-select filter-block__select">
-                        <option selected>Площадка</option>
-                    </select>
-                </div>
-                <!-- Город -->
-                <div class="col-6 col-md-2 d-none d-md-block">
-                    <select class="form-select filter-block__select">
-                        <option selected>Тольятти</option>
-                    </select>
-                </div>
-                <!-- Дата от -->
-                <div class="col-6 col-md-3 d-none d-md-flex">
-                    <!-- Дата от -->
-                    <div class="form-group position-relative w-50">
-                    <label for="date-from" class="form-label position-absolute filter-block__filter-placeholder">Дата, с</label>
-                    <input id="date-from" type="date" class="form-control filter-block__input filter-block__input-left" placeholder="Дата, с">
-                    </div>
-                        <!-- Дата по -->
-                    <div class="form-group position-relative w-50">
-                        <label for="date-to" class="form-label position-absolute filter-block__filter-placeholder">по</label>
-                        <input id="date-to" type="date" class="form-control filter-block__input filter-block__input-right" placeholder="по">
-                    </div>
-                </div>
-
-                <!-- Кнопка "Все фильтры" / "Скрыть" -->
-                <div class="col-md-3 col-sm-2 text-end display-flex justify-content-end ms-auto">
-                    <button class="btn btn-toggle filter-block__toggle top-toggle">Все фильтры
-                        <span class=" filter-block__icon ">
-
-
-
-    <svg class="filter-block__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9.14652 7.14472C9.34179 6.94946 9.34179 6.63286 9.14652 6.43761L6.70043 3.99391C6.30983 3.60371 5.67693 3.60386 5.28653 3.99421L2.84138 6.43941C2.64608 6.63466 2.64608 6.95126 2.84138 7.14652C3.03663 7.34178 3.35323 7.34178 3.54848 7.14652L5.64128 5.05371C5.83653 4.85841 6.15313 4.85846 6.34838 5.05371L8.43942 7.14472C8.63468 7.33998 8.95126 7.33998 9.14652 7.14472Z" fill="white" />
-    </svg>
-  </span>
-                    </button>
-
-
-                </div>
+<div class="container ">
+    <div class="event-page-card  overflow-hidden">
+        <div class="row g-0">
+            <div class="col-12 col-md-3 col-lg-4 col-xl-3 col-xxl-3">
+                <img src="img/casanova.png" alt="casanova club»" class="img-fluid object-fit-cover">
             </div>
-
-            <!-- Раскрывающийся блок (по умолчанию скрыт) -->
-            <div class="row g-2 g-md-3 mt-1  d-none filter-block__extra">
-
-                <div class="col-12 col-md-2 d-block d-sm-none">
-                    <select class="form-select filter-block__select">
-                        <option selected>События</option>
-                    </select>
+            <div class="col-12 col-md-9 col-lg-8 col-xl-9 col-xxl-9 d-flex flex-column p-0 pt-1 p-md-4">
+                <div class="event-meta text-muted mb-2">
+                    <p><span>ул. Тополиная, 1А </span>&middot; г. Тольятти </p>
                 </div>
-                <!-- Площадка -->
-                <div class="col-12 col-md-2 d-block d-sm-none">
-                    <select class="form-select filter-block__select">
-                        <option selected>Площадка</option>
-                    </select>
+                <h3 class="event-title">
+                    Casanova Club
+                </h3>
+                <div class="event-duration ">
+                    Вместимость зала: 530 чел.
                 </div>
+                <p class="event-description mb-2">
+                    Дворец культуры «Тольяттиазот» расположен в одном из живописнейших мест нашего города на берегу реки Волга.<span id="collapseDesc" class="collapse"><br><br>ДК по праву можно назвать центром культурной жизни Комсомольского района. Дворец регулярно дарит городу яркие праздничные мероприятия, спектакли, концерты и часто является площадкой для городских фестивалей.<br><br>Андрей Князев продолжает активную работу над видео-оформлением выступлений, и зритель сможет увидеть на экране персонажей любимых песен, выполненных автором в 3D графике. Стадионные концерты с программой «Ангел и Демон» будут включать в себя дополнительные элементы шоу, чтобы усилить атмосферу погружения зрителя в сказочный мир. Вишенкой на торте будет важное юбилейное событие у группы «КняZz» в 2025 году - 15 лет с момента образования коллектива.<br><br>Концертный зал оснащен одним из лучших в городе звуковым и световым оборудованием. Сцена, занавес, гримёрные комнаты. Возможно размещение различных «задников сцены», а также экрана для прямой или обратной проекции.</span><span class="dots">...</span>
+                </p>
+                <a href="#collapseDesc"
+                   class="read-more text-primary text-decoration-none"
+                   data-bs-toggle="collapse"
+                   role="button"
+                   aria-expanded="false"
+                   aria-controls="collapseDesc">
+                    <span class="read-more__text">Читать дальше</span>
+                    <span class="read-more__icon"></span>
+                </a>
 
-
-                <div class="col-12 col-sm-5 col-md-2 d-block d-md-none">
-                    <select class="form-select filter-block__select">
-                        <option selected>Город</option>
-                    </select>
-                </div>
-                <div class="col-12 col-sm-5 col-md-2  d-md-none d-flex">
-                    <!-- Дата от -->
-                    <div class="form-group position-relative w-50">
-                        <label for="date-from" class="form-label position-absolute filter-block__filter-placeholder">Дата, с</label>
-                        <input id="date-from" type="date" class="form-control filter-block__input filter-block__input-left" placeholder="Дата, с">
-                    </div>
-                    <!-- Дата по -->
-                    <div class="form-group position-relative w-50">
-                        <label for="date-to" class="form-label position-absolute filter-block__filter-placeholder">по</label>
-                        <input id="date-to" type="date" class="form-control filter-block__input filter-block__input-right" placeholder="по">
-                    </div>
-                </div>
-
-
-                <div class="col-12 col-sm-5 col-md-2  ">
-                    <div class="form-group position-relative d-flex">
-                        <!-- Цена от -->
-                    <select class="form-select filter-block__select filter-block__input-left">
-                        <option selected>Цена, от</option>
-                    </select>
-                        <!-- Цена до -->
-                        <select class="form-select filter-block__select filter-block__input-right">
-                            <option selected>до</option>
-                        </select>
-                    </div>
-                </div>
-
-
-                <!-- Организатор -->
-                <div class="col-12 col-sm-5 col-md-2 ">
-                    <select class="form-select filter-block__select">
-                        <option selected>Организатор</option>
-                    </select>
-                </div>
-                <div class="col-12  col-6 col-md-2 d-block d-sm-none">
-                    <button class="btn btn-toggle filter-block__toggle w-100 w-md-auto bottom-toggle">Скрыть
-                        <span class=" filter-block__icon ">
-
-
-
-    <svg class="filter-block__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9.14652 7.14472C9.34179 6.94946 9.34179 6.63286 9.14652 6.43761L6.70043 3.99391C6.30983 3.60371 5.67693 3.60386 5.28653 3.99421L2.84138 6.43941C2.64608 6.63466 2.64608 6.95126 2.84138 7.14652C3.03663 7.34178 3.35323 7.34178 3.54848 7.14652L5.64128 5.05371C5.83653 4.85841 6.15313 4.85846 6.34838 5.05371L8.43942 7.14472C8.63468 7.33998 8.95126 7.33998 9.14652 7.14472Z" fill="white" />
-    </svg>
-  </span>
-                    </button>
-
-                </div>
             </div>
         </div>
     </div>
 
+</div>
 
-    <!-- Теги-фильтры -->
-    <div class="tag-filters p-1 p-sm-0 ">
-        <button type="button" class="tag purple">Пушкинская&nbsp;карта</button>
-        <button type="button" class="tag blue">Детям</button>
-        <button type="button" class="tag green">Рекомендуемые&nbsp;события</button>
-        <button type="button" class="tag orange">Юмор</button>
-        <button type="button" class="tag cream">Местные&nbsp;театры</button>
-        <button type="button" class="tag pink">На&nbsp;этой&nbsp;неделе</button>
 
-        <button type="button" class="tag green">В&nbsp;этом&nbsp;месяце</button>
+
+
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="gallery-title mb-4">Галерея</h2>
+        <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-1.png" class="glightbox">
+                        <img src="img/gallery-2-1.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-2.png" class="glightbox">
+                        <img src="img/gallery-2-2.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-3.png" class="glightbox">
+                        <img src="img/gallery-2-3.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-4.png" class="glightbox">
+                        <img src="img/gallery-2-4.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-5.png" class="glightbox">
+                        <img src="img/gallery-2-5.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-6.png" class="glightbox">
+                        <img src="img/gallery-6.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-1.png" class="glightbox">
+                        <img src="img/gallery-2-1.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-2.png" class="glightbox">
+                        <img src="img/gallery-2-2.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-3.png" class="glightbox">
+                        <img src="img/gallery-2-3.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="img/gallery-2-4.png" class="glightbox">
+                        <img src="img/gallery-2-4.png" class="img-fluid rounded-4" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Навигация -->
+            <div class="swiper-button-prev">
+                <img src="img/swiper-button-prev.svg" alt="Назад">
+            </div>
+            <div class="swiper-button-next">
+                <img src="img/swiper-button-next.svg" alt="Вперед">
+            </div>
+        </div>
     </div>
+</section>
 
+<section class="location-section ">
+    <div class="container">
+        <h2 class="location-section__title mb-4">Адрес</h2>
+        <div class="row g-4 align-items-start">
+            <!-- Карта -->
+            <div class="col-md-7">
+                <div class="location-section__map ratio ratio-16x9  overflow-hidden">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A32f93f2430bb04ec65367697fffdddd971b04eda6b1ff65cd573a2cc15610cd5&amp;source=constructor" width="774" height="388" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!-- Адрес -->
+            <div class="col-md-5">
+                <div class="location-section__info">
+                    <p class="location-section__local-name"></p>
+                    <p class="location-section__address">г. Тольятти, ул. Коммунистическая, 12</p>
+                    <p class="location-section__number">+7 (8482) 39-89-89</p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#" class="btn btn-light-purple">Добавить в Яндекс.Навигатор</a>
+                        <a href="#" class="btn btn-light-purple">Добавить в 2Gis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <h2 class="recommend-event__title">Предстоящие события</h2>
     <!-- Сетка карточек событий -->
     <div class="row g-3 mb-3 row-xxl-5-cols">
         <!-- Карточка события -->
@@ -767,7 +687,7 @@
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
             <div class="card vertical-banner">
 
-                    <img  src="img/vertical_banner.png" alt="vertical_banner">
+                <img  src="img/vertical_banner.png" alt="vertical_banner">
 
             </div>
         </div>
@@ -1170,83 +1090,84 @@
 <footer class="footer">
     <div class="container ">
         <div class="footer__wrapper">
-        <div class="footer__row row justify-content-between">
-            <!-- Колонка: Контакты -->
-            <div class="footer__column col-9 col-md-4 ">
-                <div class="footer__contact d-flex align-items-center mb-4">
-                    <img src="img/logo-bilettlt.png" alt="logo" class="footer__logo me-3" width="48" height="48">
-                    <span class="footer__phone">+7 (8482) 39-89-89</span>
+            <div class="footer__row row justify-content-between">
+                <!-- Колонка: Контакты -->
+                <div class="footer__column col-9 col-md-4 ">
+                    <div class="footer__contact d-flex align-items-center mb-4">
+                        <img src="img/logo-bilettlt.png" alt="logo" class="footer__logo me-3" width="48" height="48">
+                        <span class="footer__phone">+7 (8482) 39-89-89</span>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <!-- Колонка: Информация -->
+                <!-- Колонка: Информация -->
 
 
-            <!-- Соцсети -->
-            <div class="footer__column col-3 col-md-2 d-flex justify-content-end  align-items-start ">
-                <div class="footer__social social">
-                    <a href="#" class="social__icon">
-                        <svg  class="social__svg" width="21" height="18" viewBox="0 0 21 18"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.6646 0.717003L0.934606 7.554C-0.275394 8.04 -0.268393 8.715 0.712607 9.016L5.26461 10.436L15.7966 3.791C16.2946 3.488 16.7496 3.651 16.3756 3.983L7.84261 11.684H7.84061L7.84261 11.685L7.52861 16.377C7.98861 16.377 8.19161 16.166 8.44961 15.917L10.6606 13.767L15.2596 17.164C16.1076 17.631 16.7166 17.391 16.9276 16.379L19.9466 2.151C20.2556 0.912003 19.4736 0.351003 18.6646 0.717003Z"  />
-                         </svg>
-                    </a>
-                    <a href="#" class="social__icon">
-                        <svg class="social__svg" width="24" height="14" viewBox="0 0 24 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.3941 6.74939C13.9793 6.5934 13.9793 5.99765 13.9535 5.58279C13.8498 4.10505 14.3684 1.84902 13.7461 0.889854C13.3055 0.319001 11.1789 0.371274 9.88289 0.449268C9.51947 0.501541 9.07888 0.578706 8.76774 0.734695C8.45659 0.890684 8.14544 1.14956 8.14544 1.38271C8.14544 1.71958 8.92372 1.66814 9.20832 2.10872C9.51947 2.57586 9.51947 3.58647 9.51947 4.41619C9.51947 5.37536 9.36348 6.6465 8.97517 6.69794C8.37859 6.72367 8.04172 6.12709 7.73058 5.68651C7.10828 4.83106 6.48599 3.76735 6.01885 2.73019C5.7857 2.18589 5.65543 1.58931 5.31856 1.35616C4.79998 0.99274 3.86654 0.967019 2.95882 0.99274C2.12909 1.01846 0.935941 0.914746 0.702788 1.4076C0.521078 1.9519 0.91022 2.47048 1.11765 2.9119C2.18053 5.21937 3.32141 7.24224 4.72199 9.16057C6.01885 10.9495 7.23689 12.3758 9.62236 13.1275C10.2969 13.3349 13.2524 13.9315 13.849 13.1275C14.0564 12.8164 14.005 12.1161 14.1087 11.5975C14.2124 11.0789 14.3418 10.5603 14.8347 10.5346C15.2496 10.5089 15.4827 10.8715 15.7424 11.1312C16.0278 11.4166 16.261 11.6498 16.4684 11.9095C16.9613 12.4023 17.4799 13.0761 18.1022 13.3358C18.9576 13.6992 20.2802 13.5955 21.5248 13.5432C22.5362 13.5175 23.2622 13.31 23.3402 12.7135C23.3925 12.2463 22.8731 11.5726 22.562 11.1834C21.7837 10.2243 21.4211 9.93886 20.5391 9.05686C20.1499 8.66772 19.6571 8.25285 19.6571 7.78655C19.6314 7.50112 19.8645 7.24224 20.0719 6.95682C20.9797 5.60851 21.8874 4.64935 22.7171 3.24877C22.9503 2.8339 23.4954 1.87474 23.288 1.4076C23.0548 0.889024 21.7579 1.04418 20.9539 1.04418C19.9168 1.04418 18.5685 0.966188 18.3088 1.17362C17.8159 1.51049 17.6085 2.05562 17.3753 2.5742C16.8567 3.76735 16.1565 4.98539 15.4304 5.89311C15.1707 6.20426 14.6787 6.85227 14.3933 6.74856L14.3941 6.74939Z" />
-                         </svg>
-                    </a>
+                <!-- Соцсети -->
+                <div class="footer__column col-3 col-md-2 d-flex justify-content-end  align-items-start ">
+                    <div class="footer__social social">
+                        <a href="#" class="social__icon">
+                            <svg  class="social__svg" width="21" height="18" viewBox="0 0 21 18"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.6646 0.717003L0.934606 7.554C-0.275394 8.04 -0.268393 8.715 0.712607 9.016L5.26461 10.436L15.7966 3.791C16.2946 3.488 16.7496 3.651 16.3756 3.983L7.84261 11.684H7.84061L7.84261 11.685L7.52861 16.377C7.98861 16.377 8.19161 16.166 8.44961 15.917L10.6606 13.767L15.2596 17.164C16.1076 17.631 16.7166 17.391 16.9276 16.379L19.9466 2.151C20.2556 0.912003 19.4736 0.351003 18.6646 0.717003Z"  />
+                            </svg>
+                        </a>
+                        <a href="#" class="social__icon">
+                            <svg class="social__svg" width="24" height="14" viewBox="0 0 24 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.3941 6.74939C13.9793 6.5934 13.9793 5.99765 13.9535 5.58279C13.8498 4.10505 14.3684 1.84902 13.7461 0.889854C13.3055 0.319001 11.1789 0.371274 9.88289 0.449268C9.51947 0.501541 9.07888 0.578706 8.76774 0.734695C8.45659 0.890684 8.14544 1.14956 8.14544 1.38271C8.14544 1.71958 8.92372 1.66814 9.20832 2.10872C9.51947 2.57586 9.51947 3.58647 9.51947 4.41619C9.51947 5.37536 9.36348 6.6465 8.97517 6.69794C8.37859 6.72367 8.04172 6.12709 7.73058 5.68651C7.10828 4.83106 6.48599 3.76735 6.01885 2.73019C5.7857 2.18589 5.65543 1.58931 5.31856 1.35616C4.79998 0.99274 3.86654 0.967019 2.95882 0.99274C2.12909 1.01846 0.935941 0.914746 0.702788 1.4076C0.521078 1.9519 0.91022 2.47048 1.11765 2.9119C2.18053 5.21937 3.32141 7.24224 4.72199 9.16057C6.01885 10.9495 7.23689 12.3758 9.62236 13.1275C10.2969 13.3349 13.2524 13.9315 13.849 13.1275C14.0564 12.8164 14.005 12.1161 14.1087 11.5975C14.2124 11.0789 14.3418 10.5603 14.8347 10.5346C15.2496 10.5089 15.4827 10.8715 15.7424 11.1312C16.0278 11.4166 16.261 11.6498 16.4684 11.9095C16.9613 12.4023 17.4799 13.0761 18.1022 13.3358C18.9576 13.6992 20.2802 13.5955 21.5248 13.5432C22.5362 13.5175 23.2622 13.31 23.3402 12.7135C23.3925 12.2463 22.8731 11.5726 22.562 11.1834C21.7837 10.2243 21.4211 9.93886 20.5391 9.05686C20.1499 8.66772 19.6571 8.25285 19.6571 7.78655C19.6314 7.50112 19.8645 7.24224 20.0719 6.95682C20.9797 5.60851 21.8874 4.64935 22.7171 3.24877C22.9503 2.8339 23.4954 1.87474 23.288 1.4076C23.0548 0.889024 21.7579 1.04418 20.9539 1.04418C19.9168 1.04418 18.5685 0.966188 18.3088 1.17362C17.8159 1.51049 17.6085 2.05562 17.3753 2.5742C16.8567 3.76735 16.1565 4.98539 15.4304 5.89311C15.1707 6.20426 14.6787 6.85227 14.3933 6.74856L14.3941 6.74939Z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 
-        <div class="footer__row row">
-            <!-- Колонка: Контакты -->
-            <div class="footer__column  col-6  col-md-4 ">
+            <div class="footer__row row">
+                <!-- Колонка: Контакты -->
+                <div class="footer__column  col-6  col-md-4 ">
 
-                <h6 class="footer__title">О нас</h6>
-                <ul class="footer__list list-unstyled">
-                    <li class="footer__item"><a href="#" class="footer__link">Публичная оферта</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Кассы</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Билетные кассы Самары</a></li>
-                </ul>
+                    <h6 class="footer__title">О нас</h6>
+                    <ul class="footer__list list-unstyled">
+                        <li class="footer__item"><a href="#" class="footer__link">Публичная оферта</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Кассы</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Билетные кассы Самары</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка: Информация -->
+                <div class="footer__column col-6 col-md-4 ">
+                    <h6 class="footer__title">Полезная информация</h6>
+                    <ul class="footer__list list-unstyled">
+                        <li class="footer__item"><a href="#" class="footer__link">Как купить билет</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Сервисный сбор при покупке билетов</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Правила возврата билетов</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Отмены, Переносы Мероприятий</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка: Организаторам -->
+                <div class="footer__column  footer__margin-minus col-6  col-md-2 ">
+                    <h6 class="footer__title">Организаторам</h6>
+                    <ul class="footer__list list-unstyled">
+                        <li class="footer__item"><a href="#" class="footer__link">Рамки для афиш</a></li>
+                    </ul>
+                </div>
+
+
             </div>
 
-            <!-- Колонка: Информация -->
-            <div class="footer__column col-6 col-md-4 ">
-                <h6 class="footer__title">Полезная информация</h6>
-                <ul class="footer__list list-unstyled">
-                    <li class="footer__item"><a href="#" class="footer__link">Как купить билет</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Сервисный сбор при покупке билетов</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Правила возврата билетов</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Отмены, Переносы Мероприятий</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
-                </ul>
-            </div>
-
-            <!-- Колонка: Организаторам -->
-            <div class="footer__column  footer__margin-minus col-6  col-md-2 ">
-                <h6 class="footer__title">Организаторам</h6>
-                <ul class="footer__list list-unstyled">
-                    <li class="footer__item"><a href="#" class="footer__link">Рамки для афиш</a></li>
-                </ul>
-            </div>
-
-
-        </div>
 
 
 
 
 
-
-        <hr class="footer__divider">
+            <hr class="footer__divider">
         </div>
     </div>
 </footer>
+
 
 <div class="city-modal-overlay" id="cityModal">
     <div class="city-modal container">
@@ -1321,86 +1242,56 @@
         </div>
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
 <script>
 
 
-    document.addEventListener('DOMContentLoaded', () => {
-        /*BOOKMARK*/
-        document.querySelectorAll('.bookmark-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.classList.toggle('active');
-            });
+    /*BOOKMARK*/
+    document.querySelectorAll('.bookmark-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
         });
+    });
+    /*TRIANGLE READ MORE*/
+    document.querySelectorAll('.read-more').forEach(link => {
+        const textEl = link.querySelector('.read-more__text');
 
-        /*BUNNER*/
-        const row = document.querySelector(".row-xxl-5-cols");
-        const cols = row?.querySelectorAll(".col") || [];
-        const screenWidth = window.innerWidth;
-        const targetIndex = screenWidth >= 1400 ? 15 : 12;
-
-        const existingBanner = row?.querySelector(".col.banner-container");
-        if (existingBanner) existingBanner.remove();
-
-        if (cols.length >= targetIndex) {
-            const bannerCol = document.createElement("div");
-            bannerCol.className = "col-12 banner-container";
-            bannerCol.innerHTML = `
-      <div class="banner-block">
-        <img src="img/horisontal_banner.png" class="img-fluid w-100" alt="Баннер">
-      </div>
-    `;
-            cols[targetIndex - 1].insertAdjacentElement("afterend", bannerCol);
-        }
-
-        /*FILTER ALL BUTTON*/
-        const extra = document.querySelector('.filter-block__extra');
-        const toggleBtn = document.querySelector('.filter-block__toggle');
-        const iconWrapper = toggleBtn?.querySelector('.filter-block__icon');
-        const topToggle = document.querySelector('.filter-block__toggle.top-toggle');
-        const bottomToggle = document.querySelector('.filter-block__toggle.bottom-toggle');
-
-        const isMobile = () => window.innerWidth < 576;
-
-        const updateTopButtonText = () => {
-            if (isMobile()) {
-                topToggle.textContent = 'Фильтры';
-            } else {
-                const isShown = !extra.classList.contains('d-none');
-                topToggle.textContent = isShown ? 'Скрыть' : 'Все фильтры';
-                toggleBtn?.appendChild(iconWrapper);
-                iconWrapper?.classList.toggle('rotated', isShown);
-            }
-        };
-
-        topToggle?.addEventListener('click', () => {
-            const isShown = !extra.classList.contains('d-none');
-            extra.classList.toggle('d-none');
-            if (!isMobile()) {
-                topToggle.textContent = isShown ? 'Все фильтры' : 'Скрыть';
-                toggleBtn?.appendChild(iconWrapper);
-                iconWrapper?.classList.toggle('rotated', isShown);
-            }
+        link.addEventListener('click', () => {
+            setTimeout(() => {
+                const expanded = link.getAttribute('aria-expanded') === 'true';
+                textEl.textContent = expanded ? 'Свернуть' : 'Читать дальше';
+            }, 100); // дождаться обновления атрибута
         });
+    });
+    /*TIME TABLE*/
+    document.querySelector('.schedule-toggle')?.addEventListener('click', function () {
+        const moreSchedule = document.querySelector('.schedule-list__more');
+        const icon = this.querySelector('.toggle-icon');
+        const text = this.querySelector('.toggle-text');
 
-        bottomToggle?.addEventListener('click', () => {
-            extra.classList.add('d-none');
-            updateTopButtonText();
-        });
+        const isHidden = moreSchedule.classList.contains('d-none');
 
-        updateTopButtonText();
-        window.addEventListener('resize', updateTopButtonText);
+        moreSchedule.classList.toggle('d-none');
+        text.textContent = isHidden ? 'Свернуть' : 'Все расписание';
+        icon.src = isHidden ? 'img/arrow-up-white.svg' : 'img/arrow-down-white.svg';
+    });
 
-        /*ДАТА формат*/
-        document.getElementById('date-input')?.addEventListener('change', function () {
-            const [year, month, day] = this.value.split('-');
-            const formatted = `${day}/${month}`;
-            document.getElementById('formatted-date').textContent = formatted;
-        });
+    /*GALLERY*/
+    const gallerySwiper = new Swiper('.gallery-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
-        /*ДРОПДАУН ГОородов*/
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
         const cityName = document.querySelector('.header__city-name');
         const arrow = document.querySelector('.header__city-arrow');
         const dropdown = document.querySelector('.header__city-dropdown');
@@ -1408,15 +1299,15 @@
         const cityModal = document.getElementById('cityModal');
 
         const svgIcon = `
-    <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0.666992 4L2.59416 5.92714C2.63442 5.96734 2.69966 5.9674 2.73993 5.92714L7.33366 1.33334" stroke="#BB8A4D" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>`;
+  <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.666992 4L2.59416 5.92714C2.63442 5.96734 2.69966 5.9674 2.73993 5.92714L7.33366 1.33334" stroke="#BB8A4D" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>`;
 
-        let selectedCity = cityName?.textContent.trim();
+        let selectedCity = cityName.textContent.trim();
 
         function updateSelectedCity(city) {
             selectedCity = city;
-            if (cityName) cityName.textContent = city;
+            cityName.textContent = city;
 
             allCityButtons.forEach(btn => {
                 const isMatch = btn.dataset.city.trim() === selectedCity;
@@ -1433,37 +1324,41 @@
             });
         }
 
+        // обработка кликов по всем кнопкам (dropdown + modal)
         allCityButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const city = btn.dataset.city.trim();
                 updateSelectedCity(city);
-                dropdown?.classList.remove('show');
-                arrow?.classList.remove('rotate');
+                dropdown.classList.remove('show');
+                arrow.classList.remove('rotate');
                 cityModal?.classList.remove('active');
             });
         });
 
-        arrow?.addEventListener('click', (e) => {
+        // Открытие дропдауна
+        arrow.addEventListener('click', (e) => {
             e.stopPropagation();
-            dropdown?.classList.toggle('show');
-            arrow?.classList.toggle('rotate');
-            updateSelectedCity(selectedCity);
+            dropdown.classList.toggle('show');
+            arrow.classList.toggle('rotate');
+            updateSelectedCity(selectedCity); // обновляем галочки
         });
 
+        // Закрытие при клике вне
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.header__city')) {
-                dropdown?.classList.remove('show');
-                arrow?.classList.remove('rotate');
+                dropdown.classList.remove('show');
+                arrow.classList.remove('rotate');
             }
         });
 
-        cityName?.addEventListener('click', () => {
+        // Модалка: открыть/закрыть
+        document.querySelector('.header__city-name')?.addEventListener('click', () => {
             updateSelectedCity(selectedCity);
-            cityModal?.classList.add('active');
+            cityModal.classList.add('active');
         });
 
         document.querySelector('.city-modal__close')?.addEventListener('click', () => {
-            cityModal?.classList.remove('active');
+            cityModal.classList.remove('active');
         });
 
         cityModal?.addEventListener('click', function (e) {
@@ -1473,15 +1368,6 @@
         });
     });
 
-
 </script>
-
-
-
-
-
-
-
-
 </body>
 </html>

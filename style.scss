@@ -1380,6 +1380,20 @@ body {
     font-size: 36px;
     line-height: 133%;
     color: #171717;
+    span  {
+      a {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 133%;
+        color: #564dbb;
+        text-decoration: none;
+        border-bottom: 1px dashed #564dbb;
+        padding-bottom: 2px;
+        display: inline-block;
+         }
+
+
+    }
   }
 }
 
@@ -1642,6 +1656,314 @@ body {
   }
 }
 
+
+
+/*Страница locations*/
+.locations {
+    .card-img-top {
+
+      height: 135px;
+      object-fit: cover;
+      @media (max-width:  500px) {
+        height: 80px;
+        border-radius: 12px;
+      }
+    }
+    .event-card .card-title {
+      margin-bottom: 0px;
+    }
+}
+
+/*СПИСКИ*/
+.city-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width:  500px) {
+    align-items: flex-start;
+    padding-top: 8px;
+  }
+}
+.city-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.city-modal {
+  width: 80%;
+  background:#f2f2f2;
+  padding: 16px 16px 16px 42px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px 0 rgba(82, 77, 117, 0.15);
+  font-family: 'Ubuntu', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+  @media (max-width:  768px) {
+    width: calc(100% - 48px);
+  }
+  @media (max-width:  500px) {
+    padding: 7px 7px 7px 7px;
+    width: calc(100% - 8px);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+.city-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.city-modal__title {
+  font-family: $font-lato;
+  font-weight: $font-lato-bold;
+  padding-left: 28px;
+  font-size: 48px;
+  line-height: 100%;
+  color: #171717;
+  margin-bottom: 24px;
+  margin-top: 16px;
+  @media (max-width:  500px) {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+.city-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  margin-bottom: auto;
+}
+.city-modal__close:hover {
+  color: #000;
+}
+.city-modal__body {
+  /* Дополнительные стили для тела модалки (если нужны) */
+}
+.city-modal__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3; // три столбца
+  column-gap: 32px; // отступ между ними
+  max-height: 1848px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @media (max-width:  768px) {
+    columns: 2;
+
+  }
+  @media (max-width:  500px) {
+    column-gap: 8px;
+  }
+}
+.city-modal__list li {
+  margin-bottom: 16px;
+  @media (max-width:  500px) {
+    margin-bottom: 8px;
+  }
+}
+.city-modal__city {
+  position: relative;
+  padding-left: 28px; // место под галочку
+  font-size: 24px;
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular ;
+  color: #363434;
+  line-height: 133%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  @media (max-width:  500px) {
+    font-size: 14px;
+  }
+
+
+
+  .city-check-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+
+    svg {
+      width:13px;
+      height: 13px;
+      display: block;
+    }
+  }
+
+  &.active {
+    font-weight: $font-ubuntu-medium; // необязательно, если нужно подчеркнуть выбранный
+  }
+}
+.city-modal__city:hover {
+  text-decoration: underline;
+}
+
+.header__city-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 240px;
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 1050;
+  display: none;
+  padding: 10px 0;
+  font-family: 'Ubuntu', sans-serif;
+
+  &.show {
+    display: block;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      button {
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #171717;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+}
+
+.header__city {
+  position: relative;
+
+  &-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.header__city-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 180px;
+  max-height: 208px;
+  overflow-y: auto;
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
+  display: none;
+  border-right: 4px solid #f2f2f2; //
+  border-top: 4px solid #f2f2f2; //
+  border-bottom: 4px solid #f2f2f2; //
+
+
+
+  &.show {
+    display: block;
+  }
+
+  &-list {
+    margin-right: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 20px;
+        position: relative;
+        font-size: 14px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #171717;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding-right: 4px;
+
+        svg {
+          display: none;
+        }
+
+        &.active svg {
+          display: inline-block;
+        }
+
+        &:hover {
+          background-color: #f2f2f2;
+        }
+
+        .check-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Кастомный скролл
+  &::-webkit-scrollbar {
+    width: 6px;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
 
 
 
