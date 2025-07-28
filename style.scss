@@ -495,6 +495,7 @@ $font-lato-bold: 700;
 
 
   }
+
   &__tags {
     margin-top: 0.5rem;
   }
@@ -822,14 +823,58 @@ body {
 
 
 .event-card {
+  position: relative;
   height: 100%;
   border: 24px solid $color-light-grey;
   border-bottom : 16px solid $color-light-grey;
   border-radius: 24px;
   background: $color-light-grey;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
 
 
-  overflow: hidden;
+    &::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  // стрелка появляется при ховере
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    right: -24px;
+    width: 64px;
+    height: 48px;
+    background: $color-gold url('img/arrow-right-top.svg') no-repeat center center;
+    background-size: 14px 14px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    border-radius: 24px 0;
+    fill: #bb8a4d;
+    box-shadow: inset 0 4px 4px 0 #ac7c41;
+    @media (max-width:  500px) {
+      width: 48px;
+      height: 32px;
+      border-radius: 16px 0;
+      bottom: -8px;
+      right: -8px;
+    }
+
+
+  }
+
+  .card-img-top {
+    border-radius: 18px;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
   @media (max-width:  500px) {
     border: 8px solid $color-light-grey;
     box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);

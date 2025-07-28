@@ -761,12 +761,52 @@ body {
 
 /* Карточка события */
 .event-card {
+  position: relative;
   height: 100%;
   border: 24px solid #f2f2f2;
   border-bottom: 16px solid #f2f2f2;
   border-radius: 24px;
   background: #f2f2f2;
-  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.event-card:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.event-card::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  right: -24px;
+  width: 64px;
+  height: 48px;
+  background: #bb8a4d url("img/arrow-right-top.svg") no-repeat center center;
+  background-size: 14px 14px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  border-radius: 24px 0;
+  fill: #bb8a4d;
+  box-shadow: inset 0 4px 4px 0 #ac7c41;
+}
+@media (max-width: 500px) {
+  .event-card::after {
+    width: 48px;
+    height: 32px;
+    border-radius: 16px 0;
+    bottom: -8px;
+    right: -8px;
+  }
+}
+.event-card .card-img-top {
+  border-radius: 18px;
+  height: 270px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 @media (max-width: 500px) {
   .event-card {

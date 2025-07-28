@@ -181,6 +181,7 @@
                             <div class="slider__date">31 мая, 19:00 • ДК «Автоград»</div>
                             <h3 class="slider__title ">Симфонические РОК-<br>ХИТЫ Лучшее CONCORD<br> ORCHESTRA</h3>
                             <div class="slider__price">от 1 500 ₽</div>
+
                         </div>
                         <div class="slider__tags">
                             <span class=" tag slider__tag  purple slider__tag ">Пушкинская карта</span>
@@ -360,7 +361,7 @@
     <div class="row g-3 mb-3 row-xxl-5-cols">
         <!-- Карточка события -->
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
-            <div class="card event-card">
+            <div class="card event-card " data-href="event-page.html">
                 <div class="card-img-container position-relative">
                     <img src="img/knyazz.png" class="card-img-top" alt="Event Image">
                     <button class="btn bookmark-btn position-absolute top-0 end-0 " >
@@ -377,7 +378,9 @@
 
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <a href="event-page.html" class="slider__price-link">
                     <span class="price">от 2 500 ₽</span>
+                    </a>
                     <span class="status-cancelled">Отменен</span>
 
                 </div>
@@ -1473,6 +1476,16 @@
         });
     });
 
+    /*Переход по ссылке карточек*/
+    document.querySelectorAll('.event-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // предотвращаем переход, если клик по кнопке внутри карточки
+            if (e.target.closest('button')) return;
+
+            const url = card.dataset.href;
+            if (url) window.location.href = url;
+        });
+    });
 
 </script>
 
