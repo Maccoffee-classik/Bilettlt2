@@ -1426,6 +1426,9 @@ body {
     font-size: 36px;
     line-height: 133%;
     color: #171717;
+    @media (max-width:  500px) {
+      font-size: 24px;
+    }
     span  {
       a {
         font-weight: 700;
@@ -1436,6 +1439,9 @@ body {
         border-bottom: 1px dashed #564dbb;
         padding-bottom: 2px;
         display: inline-block;
+        @media (max-width:  500px) {
+          font-size: 24px;
+        }
          }
 
 

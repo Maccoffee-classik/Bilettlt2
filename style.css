@@ -1346,6 +1346,11 @@ body {
   line-height: 133%;
   color: #171717;
 }
+@media (max-width: 500px) {
+  .schedule-section__title {
+    font-size: 24px;
+  }
+}
 .schedule-section__title span a {
   font-weight: 700;
   font-size: 36px;
@@ -1355,6 +1360,11 @@ body {
   border-bottom: 1px dashed #564dbb;
   padding-bottom: 2px;
   display: inline-block;
+}
+@media (max-width: 500px) {
+  .schedule-section__title span a {
+    font-size: 24px;
+  }
 }
 
 .schedule-list__more .schedule-item:last-of-type {
