@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilettlt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@500;700;900&family=Onest:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.scss">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+
+</head>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<body>
+
+
+<header class="header fixed-top">
+  <div class="container header__container">
+
+    <div class="header__left">
+      <a href="index.html" class="header__logo"><img src="img/logo-bilettlt.png" alt="Логотип"></a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a href="#">Площадки</a></li>
+          <li class="header__menu-item"><a href="news-listing.html">Новости</a></li>
+          <li class="header__menu-item"><a href="#">Кассы</a></li>
+        </ul>
+        <form action="#" class="header__search">
+          <input type="text" placeholder="Поиск по названию" class="header__search-input">
+          <button type="submit" class="header__search-btn"><img src="img/search-ico.svg" alt="search-ico"></button>
+        </form>
+      </nav>
+    </div>
+    <div class="header__right">
+
+      <div class="header__phone">+7 (8482) 39-89-89</div>
+      <div class="header__city">
+                <span class="header__city-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2834 1.18962C14.3552 0.787673 15.402 1.83437 15 2.90622L10.7148 14.3333C10.2383 15.6041 8.38923 15.4334 8.15336 14.0969L7.24429 8.94533L2.09276 8.03627C0.756208 7.8004 0.585535 5.95131 1.85631 5.47477L13.2834 1.18962ZM13.7516 2.43805L2.32448 6.7232L7.47596 7.63233C8.02783 7.72967 8.45989 8.16173 8.55729 8.7136L9.46643 13.8651L13.7516 2.43805Z" fill="white" />
+                    </svg>
+                </span>
+        <span class="header__city-name">Тольятти</span>
+        <span class="header__city-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M2.8536 4.85535C2.65834 5.0506 2.65834 5.3672 2.8536 5.56245L5.2997 8.00615C5.6903 8.39635 6.3232 8.3962 6.7136 8.00585L9.15875 5.56065C9.35405 5.3654 9.35405 5.0488 9.15875 4.85354C8.9635 4.65828 8.6469 4.65828 8.45165 4.85354L6.35885 6.94635C6.1636 7.14165 5.847 7.1416 5.65175 6.94635L3.56071 4.85535C3.36545 4.66008 3.04886 4.66008 2.8536 4.85535Z" fill="white" />
+                     </svg>
+                </span>
+        <div class="header__city-dropdown">
+
+          <ul class="header__city-dropdown-list">
+            <li><button type="button" data-city="Все" class="city-modal__city">Все</button></li>
+            <li><button type="button" data-city="Артемьевск" class="city-modal__city">Артемьевск</button></li>
+            <li><button type="button" data-city="Балашиха" class="city-modal__city">Балашиха</button></li>
+            <li><button type="button" data-city="Брянск" class="city-modal__city">Брянск</button></li>
+            <li><button type="button" data-city="Бузлук" class="city-modal__city">Бузлук</button></li>
+            <li><button type="button" data-city="Великий новгород" class="city-modal__city">Великий новгород</button></li>
+            <li><button type="button" data-city="Волгоград" class="city-modal__city">Волгоград</button></li>
+            <li><button type="button" data-city="Воскресенск" class="city-modal__city">Воскресенск</button></li>
+            <li><button type="button" data-city="Димитровград" class="city-modal__city">Димитровград</button></li>
+            <li><button type="button" data-city="Дмитров" class="city-modal__city">Дмитров</button></li>
+            <li><button type="button" data-city="Домодедово" class="city-modal__city">Домодедово</button></li>
+            <li><button type="button" data-city="Екатеринбург" class="city-modal__city">Екатеринбург</button></li>
+            <li><button type="button" data-city="Жигулевск" class="city-modal__city">Жигулевск</button></li>
+            <li><button type="button" data-city="Жуковский" class="city-modal__city">Жуковский</button></li>
+            <li><button type="button" data-city="Зеленоград" class="city-modal__city">Зеленоград</button></li>
+            <li><button type="button" data-city="Иваново" class="city-modal__city">Иваново</button></li>
+            <li><button type="button" data-city="Ивантеевка" class="city-modal__city">Ивантеевка</button></li>
+            <li><button type="button" data-city="Калуга" class="city-modal__city">Калуга</button></li>
+            <li><button type="button" data-city="Кинель" class="city-modal__city">Кинель</button></li>
+            <li><button type="button" data-city="Королёв" class="city-modal__city">Королёв</button></li>
+            <li><button type="button" data-city="Кострома" class="city-modal__city">Кострома</button></li>
+            <li><button type="button" data-city="Краснодар" class="city-modal__city">Краснодар</button></li>
+            <li><button type="button" data-city="Магнитогорск" class="city-modal__city">Магнитогорск</button></li>
+            <li><button type="button" data-city="Москва" class="city-modal__city">Москва</button></li>
+            <li><button type="button" data-city="Мытищи" class="city-modal__city">Мытищи</button></li>
+            <li><button type="button" data-city="Наро-Фоминск" class="city-modal__city">Наро-Фоминск</button></li>
+            <li><button type="button" data-city="Нижний Новгород" class="city-modal__city">Нижний Новгород</button></li>
+            <li><button type="button" data-city="Нижний Тагил" class="city-modal__city">Нижний Тагил</button></li>
+            <li><button type="button" data-city="Новокуйбышевск" class="city-modal__city">Новокуйбышевск</button></li>
+            <li><button type="button" data-city="Новороссийск" class="city-modal__city">Новороссийск</button></li>
+            <li><button type="button" data-city="Оренбург" class="city-modal__city">Оренбург</button></li>
+            <li><button type="button" data-city="Отрадный" class="city-modal__city">Отрадный</button></li>
+            <li><button type="button" data-city="Пенза" class="city-modal__city">Пенза</button></li>
+            <li><button type="button" data-city="Пермь" class="city-modal__city">Пермь</button></li>
+            <li><button type="button" data-city="Реутов" class="city-modal__city">Реутов</button></li>
+            <li><button type="button" data-city="Ростов-на-Дону" class="city-modal__city">Ростов-на-Дону</button></li>
+            <li><button type="button" data-city="Санкт-Петербург" class="city-modal__city">Санкт-Петербург</button></li>
+            <li><button type="button" data-city="Смоленск" class="city-modal__city">Смоленск</button></li>
+            <li><button type="button" data-city="Ставрополь" class="city-modal__city">Ставрополь</button></li>
+            <li><button type="button" data-city="Сырань" class="city-modal__city">Сырань</button></li>
+            <li><button type="button" data-city="Тольятти" class="city-modal__city">Тольятти</button></li>
+            <li><button type="button" data-city="Томск" class="city-modal__city">Томск</button></li>
+            <li><button type="button" data-city="Тула" class="city-modal__city">Тула</button></li>
+            <li><button type="button" data-city="Уфа" class="city-modal__city">Уфа</button></li>
+            <li><button type="button" data-city="Фрязино" class="city-modal__city">Фрязино</button></li>
+            <li><button type="button" data-city="Химки" class="city-modal__city">Химки</button></li>
+            <li><button type="button" data-city="Челябинск" class="city-modal__city">Челябинск</button></li>
+            <li><button type="button" data-city="Череповец" class="city-modal__city">Череповец</button></li>
+            <li><button type="button" data-city="Чехов" class="city-modal__city">Чехов</button></li>
+            <li><button type="button" data-city="Щелково" class="city-modal__city">Щелково</button></li>
+            <li><button type="button" data-city="Электросталь" class="city-modal__city">Электросталь</button></li>
+            <li><button type="button" data-city="Ярославль" class="city-modal__city">Ярославль</button></li>
+            <li><button type="button" data-city="Самара" class="city-modal__city">Самара</button></li>
+          </ul>
+
+        </div>
+      </div>
+      <button class="header__btn bookmark-btn  d-none d-md-flex "> </button>
+      <button class="header__burger navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Меню">
+                                        <span class="navbar-toggler-icon"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.666016 1H11.3327M0.666016 5H11.3327M0.666016 9H11.3327" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+
+<section class="breadcrumb-section ">
+  <div class="container my-3">
+    <div class="d-flex justify-content-between flex-wrap align-items-center gap-2">
+
+      <!-- Хлебные крошки -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="location.html">Новости</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Режим работы касс  в мае</li>
+        </ol>
+      </nav>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="news-detail-section ">
+  <div class="container">
+    <div class="news-detail-card">
+      <p class="news-detail-date ">21 апреля 2025</p>
+      <h2 class="news-detail-title ">Режим работы касс в мае</h2>
+      <p class="news-detail-text ">
+        В период майских праздников кассы работают в следующем режиме.
+      </p>
+      <p class="news-detail-text ">
+        <strong>1, 2, 8, 9, 10 и 11 мая</strong> - выходные дни.
+      </p>
+      <p class="news-detail-text ">
+        В остальное время кассы работают в обычном режиме: ежедневно, с 13.00 до 20.00.
+      </p>
+      <p class="news-detail-text">
+        Билеты на все мероприятия доступны к покупке онлайн на нашем сайте
+        <a href="#" class="news-detail-link">bilettlt.ru</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="container ">
+    <div class="footer__wrapper">
+      <div class="footer__row row justify-content-between">
+        <!-- Колонка: Контакты -->
+        <div class="footer__column col-9 col-md-4 ">
+          <div class="footer__contact d-flex align-items-center mb-4">
+            <img src="img/logo-bilettlt.png" alt="logo" class="footer__logo me-3" width="48" height="48">
+            <span class="footer__phone">+7 (8482) 39-89-89</span>
+          </div>
+
+        </div>
+
+        <!-- Колонка: Информация -->
+
+
+        <!-- Соцсети -->
+        <div class="footer__column col-3 col-md-2 d-flex justify-content-end  align-items-start ">
+          <div class="footer__social social">
+            <a href="#" class="social__icon">
+              <svg  class="social__svg" width="21" height="18" viewBox="0 0 21 18"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.6646 0.717003L0.934606 7.554C-0.275394 8.04 -0.268393 8.715 0.712607 9.016L5.26461 10.436L15.7966 3.791C16.2946 3.488 16.7496 3.651 16.3756 3.983L7.84261 11.684H7.84061L7.84261 11.685L7.52861 16.377C7.98861 16.377 8.19161 16.166 8.44961 15.917L10.6606 13.767L15.2596 17.164C16.1076 17.631 16.7166 17.391 16.9276 16.379L19.9466 2.151C20.2556 0.912003 19.4736 0.351003 18.6646 0.717003Z"  />
+              </svg>
+            </a>
+            <a href="#" class="social__icon">
+              <svg class="social__svg" width="24" height="14" viewBox="0 0 24 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.3941 6.74939C13.9793 6.5934 13.9793 5.99765 13.9535 5.58279C13.8498 4.10505 14.3684 1.84902 13.7461 0.889854C13.3055 0.319001 11.1789 0.371274 9.88289 0.449268C9.51947 0.501541 9.07888 0.578706 8.76774 0.734695C8.45659 0.890684 8.14544 1.14956 8.14544 1.38271C8.14544 1.71958 8.92372 1.66814 9.20832 2.10872C9.51947 2.57586 9.51947 3.58647 9.51947 4.41619C9.51947 5.37536 9.36348 6.6465 8.97517 6.69794C8.37859 6.72367 8.04172 6.12709 7.73058 5.68651C7.10828 4.83106 6.48599 3.76735 6.01885 2.73019C5.7857 2.18589 5.65543 1.58931 5.31856 1.35616C4.79998 0.99274 3.86654 0.967019 2.95882 0.99274C2.12909 1.01846 0.935941 0.914746 0.702788 1.4076C0.521078 1.9519 0.91022 2.47048 1.11765 2.9119C2.18053 5.21937 3.32141 7.24224 4.72199 9.16057C6.01885 10.9495 7.23689 12.3758 9.62236 13.1275C10.2969 13.3349 13.2524 13.9315 13.849 13.1275C14.0564 12.8164 14.005 12.1161 14.1087 11.5975C14.2124 11.0789 14.3418 10.5603 14.8347 10.5346C15.2496 10.5089 15.4827 10.8715 15.7424 11.1312C16.0278 11.4166 16.261 11.6498 16.4684 11.9095C16.9613 12.4023 17.4799 13.0761 18.1022 13.3358C18.9576 13.6992 20.2802 13.5955 21.5248 13.5432C22.5362 13.5175 23.2622 13.31 23.3402 12.7135C23.3925 12.2463 22.8731 11.5726 22.562 11.1834C21.7837 10.2243 21.4211 9.93886 20.5391 9.05686C20.1499 8.66772 19.6571 8.25285 19.6571 7.78655C19.6314 7.50112 19.8645 7.24224 20.0719 6.95682C20.9797 5.60851 21.8874 4.64935 22.7171 3.24877C22.9503 2.8339 23.4954 1.87474 23.288 1.4076C23.0548 0.889024 21.7579 1.04418 20.9539 1.04418C19.9168 1.04418 18.5685 0.966188 18.3088 1.17362C17.8159 1.51049 17.6085 2.05562 17.3753 2.5742C16.8567 3.76735 16.1565 4.98539 15.4304 5.89311C15.1707 6.20426 14.6787 6.85227 14.3933 6.74856L14.3941 6.74939Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="footer__row row">
+        <!-- Колонка: Контакты -->
+        <div class="footer__column  col-6  col-md-4 ">
+
+          <h6 class="footer__title">О нас</h6>
+          <ul class="footer__list list-unstyled">
+            <li class="footer__item"><a href="#" class="footer__link">Публичная оферта</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Кассы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Билетные кассы Самары</a></li>
+          </ul>
+        </div>
+
+        <!-- Колонка: Информация -->
+        <div class="footer__column col-6 col-md-4 ">
+          <h6 class="footer__title">Полезная информация</h6>
+          <ul class="footer__list list-unstyled">
+            <li class="footer__item"><a href="#" class="footer__link">Как купить билет</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Сервисный сбор при покупке билетов</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Правила возврата билетов</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Отмены, Переносы Мероприятий</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+          </ul>
+        </div>
+
+        <!-- Колонка: Организаторам -->
+        <div class="footer__column  footer__margin-minus col-6  col-md-2 ">
+          <h6 class="footer__title">Организаторам</h6>
+          <ul class="footer__list list-unstyled">
+            <li class="footer__item"><a href="#" class="footer__link">Рамки для афиш</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+      <hr class="footer__divider">
+    </div>
+  </div>
+</footer>
+
+
+<div class="city-modal-overlay" id="cityModal">
+  <div class="city-modal container">
+    <div class="city-modal__header">
+      <h2 class="city-modal__title">Выберите город</h2>
+      <button type="button" class="city-modal__close" aria-label="Закрыть"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.574922 0.574922C0.856213 0.293715 1.23768 0.135742 1.63542 0.135742C2.03317 0.135742 2.41463 0.293715 2.69592 0.574922L7.99992 5.87892L13.3039 0.574922C13.5868 0.301685 13.9657 0.150493 14.359 0.153911C14.7523 0.157328 15.1285 0.315082 15.4066 0.593194C15.6848 0.871306 15.8425 1.24752 15.8459 1.64082C15.8493 2.03412 15.6982 2.41302 15.4249 2.69592L10.1209 7.99992L15.4249 13.3039C15.6982 13.5868 15.8493 13.9657 15.8459 14.359C15.8425 14.7523 15.6848 15.1285 15.4066 15.4066C15.1285 15.6848 14.7523 15.8425 14.359 15.8459C13.9657 15.8493 13.5868 15.6982 13.3039 15.4249L7.99992 10.1209L2.69592 15.4249C2.41302 15.6982 2.03412 15.8493 1.64082 15.8459C1.24752 15.8425 0.871306 15.6848 0.593194 15.4066C0.315082 15.1285 0.157328 14.7523 0.153911 14.359C0.150493 13.9657 0.301685 13.5868 0.574922 13.3039L5.87892 7.99992L0.574922 2.69592C0.293715 2.41463 0.135742 2.03317 0.135742 1.63542C0.135742 1.23768 0.293715 0.856213 0.574922 0.574922Z" fill="#838383" />
+      </svg></button>
+    </div>
+    <div class="city-modal__body">
+      <div class="row"><!-- 4 columns of city links -->
+        <div class="col-12">
+          <ul class="city-modal__list">
+            <li><button type="button" data-city="Все" class="city-modal__city">Все</button></li>
+            <li><button type="button" data-city="Артемьевск" class="city-modal__city">Артемьевск</button></li>
+            <li><button type="button" data-city="Балашиха" class="city-modal__city">Балашиха</button></li>
+            <li><button type="button" data-city="Брянск" class="city-modal__city">Брянск</button></li>
+            <li><button type="button" data-city="Бузлук" class="city-modal__city">Бузлук</button></li>
+            <li><button type="button" data-city="Великий новгород" class="city-modal__city">Великий новгород</button></li>
+            <li><button type="button" data-city="Волгоград" class="city-modal__city">Волгоград</button></li>
+            <li><button type="button" data-city="Воскресенск" class="city-modal__city">Воскресенск</button></li>
+            <li><button type="button" data-city="Димитровград" class="city-modal__city">Димитровград</button></li>
+            <li><button type="button" data-city="Дмитров" class="city-modal__city">Дмитров</button></li>
+            <li><button type="button" data-city="Домодедово" class="city-modal__city">Домодедово</button></li>
+            <li><button type="button" data-city="Екатеринбург" class="city-modal__city">Екатеринбург</button></li>
+            <li><button type="button" data-city="Жигулевск" class="city-modal__city">Жигулевск</button></li>
+            <li><button type="button" data-city="Жуковский" class="city-modal__city">Жуковский</button></li>
+            <li><button type="button" data-city="Зеленоград" class="city-modal__city">Зеленоград</button></li>
+            <li><button type="button" data-city="Иваново" class="city-modal__city">Иваново</button></li>
+            <li><button type="button" data-city="Ивантеевка" class="city-modal__city">Ивантеевка</button></li>
+            <li><button type="button" data-city="Калуга" class="city-modal__city">Калуга</button></li>
+            <li><button type="button" data-city="Кинель" class="city-modal__city">Кинель</button></li>
+            <li><button type="button" data-city="Королёв" class="city-modal__city">Королёв</button></li>
+            <li><button type="button" data-city="Кострома" class="city-modal__city">Кострома</button></li>
+            <li><button type="button" data-city="Краснодар" class="city-modal__city">Краснодар</button></li>
+            <li><button type="button" data-city="Магнитогорск" class="city-modal__city">Магнитогорск</button></li>
+            <li><button type="button" data-city="Москва" class="city-modal__city">Москва</button></li>
+            <li><button type="button" data-city="Мытищи" class="city-modal__city">Мытищи</button></li>
+            <li><button type="button" data-city="Наро-Фоминск" class="city-modal__city">Наро-Фоминск</button></li>
+            <li><button type="button" data-city="Нижний Новгород" class="city-modal__city">Нижний Новгород</button></li>
+            <li><button type="button" data-city="Нижний Тагил" class="city-modal__city">Нижний Тагил</button></li>
+            <li><button type="button" data-city="Новокуйбышевск" class="city-modal__city">Новокуйбышевск</button></li>
+            <li><button type="button" data-city="Новороссийск" class="city-modal__city">Новороссийск</button></li>
+            <li><button type="button" data-city="Оренбург" class="city-modal__city">Оренбург</button></li>
+            <li><button type="button" data-city="Отрадный" class="city-modal__city">Отрадный</button></li>
+            <li><button type="button" data-city="Пенза" class="city-modal__city">Пенза</button></li>
+            <li><button type="button" data-city="Пермь" class="city-modal__city">Пермь</button></li>
+            <li><button type="button" data-city="Реутов" class="city-modal__city">Реутов</button></li>
+            <li><button type="button" data-city="Ростов-на-Дону" class="city-modal__city">Ростов-на-Дону</button></li>
+            <li><button type="button" data-city="Санкт-Петербург" class="city-modal__city">Санкт-Петербург</button></li>
+            <li><button type="button" data-city="Смоленск" class="city-modal__city">Смоленск</button></li>
+            <li><button type="button" data-city="Ставрополь" class="city-modal__city">Ставрополь</button></li>
+            <li><button type="button" data-city="Сырань" class="city-modal__city">Сырань</button></li>
+            <li><button type="button" data-city="Тольятти" class="city-modal__city">Тольятти</button></li>
+            <li><button type="button" data-city="Томск" class="city-modal__city">Томск</button></li>
+            <li><button type="button" data-city="Тула" class="city-modal__city">Тула</button></li>
+            <li><button type="button" data-city="Уфа" class="city-modal__city">Уфа</button></li>
+            <li><button type="button" data-city="Фрязино" class="city-modal__city">Фрязино</button></li>
+            <li><button type="button" data-city="Химки" class="city-modal__city">Химки</button></li>
+            <li><button type="button" data-city="Челябинск" class="city-modal__city">Челябинск</button></li>
+            <li><button type="button" data-city="Череповец" class="city-modal__city">Череповец</button></li>
+            <li><button type="button" data-city="Чехов" class="city-modal__city">Чехов</button></li>
+            <li><button type="button" data-city="Щелково" class="city-modal__city">Щелково</button></li>
+            <li><button type="button" data-city="Электросталь" class="city-modal__city">Электросталь</button></li>
+            <li><button type="button" data-city="Ярославль" class="city-modal__city">Ярославль</button></li>
+            <li><button type="button" data-city="Самара" class="city-modal__city">Самара</button></li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+
+  /*BOOKMARK*/
+  document.querySelectorAll('.bookmark-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+    });
+  });
+  /*TRIANGLE READ MORE*/
+  document.querySelectorAll('.read-more').forEach(link => {
+    const textEl = link.querySelector('.read-more__text');
+
+    link.addEventListener('click', () => {
+      setTimeout(() => {
+        const expanded = link.getAttribute('aria-expanded') === 'true';
+        textEl.textContent = expanded ? 'Свернуть' : 'Читать дальше';
+      }, 100); // дождаться обновления атрибута
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const cityName = document.querySelector('.header__city-name');
+    const arrow = document.querySelector('.header__city-arrow');
+    const dropdown = document.querySelector('.header__city-dropdown');
+    const allCityButtons = document.querySelectorAll('[data-city]');
+    const cityModal = document.getElementById('cityModal');
+
+    const svgIcon = `
+  <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.666992 4L2.59416 5.92714C2.63442 5.96734 2.69966 5.9674 2.73993 5.92714L7.33366 1.33334" stroke="#BB8A4D" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>`;
+
+    let selectedCity = cityName.textContent.trim();
+
+    function updateSelectedCity(city) {
+      selectedCity = city;
+      cityName.textContent = city;
+
+      allCityButtons.forEach(btn => {
+        const isMatch = btn.dataset.city.trim() === selectedCity;
+        btn.classList.toggle('active', isMatch);
+        btn.querySelector('svg')?.remove();
+        if (isMatch) {
+          const icon = `<span class="city-check-icon">${svgIcon}</span>`;
+          if (btn.closest('.city-modal__list')) {
+            btn.insertAdjacentHTML('afterbegin', icon);
+          } else {
+            btn.insertAdjacentHTML('beforeend', svgIcon);
+          }
+        }
+      });
+    }
+
+    // обработка кликов по всем кнопкам (dropdown + modal)
+    allCityButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const city = btn.dataset.city.trim();
+        updateSelectedCity(city);
+        dropdown.classList.remove('show');
+        arrow.classList.remove('rotate');
+        cityModal?.classList.remove('active');
+      });
+    });
+
+    // Открытие дропдауна
+    arrow.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('show');
+      arrow.classList.toggle('rotate');
+      updateSelectedCity(selectedCity); // обновляем галочки
+    });
+
+    // Закрытие при клике вне
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.header__city')) {
+        dropdown.classList.remove('show');
+        arrow.classList.remove('rotate');
+      }
+    });
+
+    // Модалка: открыть/закрыть
+    document.querySelector('.header__city-name')?.addEventListener('click', () => {
+      updateSelectedCity(selectedCity);
+      cityModal.classList.add('active');
+    });
+
+    document.querySelector('.city-modal__close')?.addEventListener('click', () => {
+      cityModal.classList.remove('active');
+    });
+
+    cityModal?.addEventListener('click', function (e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
+    });
+  });
+
+</script>
+</body>
+</html>

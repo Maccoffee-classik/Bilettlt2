@@ -1563,6 +1563,28 @@ body {
   color: #000;
   margin-bottom: 16px;
 }
+.location-section .location-section__time {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 111%;
+  color: #000;
+}
+.location-section .location-section__time .location-section__hours {
+  color: #000;
+  margin-right: 8px;
+}
+.location-section .location-section__time .location-section__note {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #838383;
+}
+@media (max-width: 768px) {
+  .location-section .location-section__time {
+    font-size: 18px;
+  }
+}
 .location-section .btn-light-purple {
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -1998,6 +2020,336 @@ body {
 }
 .news-section .pagination-custom .page-item.active .page-link {
   background: #b88446;
+  color: #fff;
+}
+
+/*СТРАНИЦА NEWS-UNIT*/
+.news-detail-section {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+@media (max-width: 576px) {
+  .news-detail-section {
+    padding-top: 8px;
+  }
+}
+.news-detail-section .news-detail-card {
+  background: #f2f2f2;
+  border-radius: 24px;
+  padding: 24px;
+}
+@media (max-width: 576px) {
+  .news-detail-section .news-detail-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+.news-detail-section .news-detail-date {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #838383;
+  margin-bottom: 8px;
+}
+@media (max-width: 576px) {
+  .news-detail-section .news-detail-date {
+    font-size: 9px;
+  }
+}
+.news-detail-section .news-detail-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  color: #171717;
+  margin-bottom: 28px;
+}
+@media (max-width: 576px) {
+  .news-detail-section .news-detail-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+.news-detail-section .news-detail-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 16px;
+}
+.news-detail-section .news-detail-text strong {
+  font-weight: 700;
+}
+.news-detail-section .news-detail-card .news-detail-text:last-child {
+  margin-bottom: 0;
+}
+.news-detail-section .news-detail-link {
+  color: #bb8a4d;
+  text-decoration: none;
+}
+.news-detail-section .news-detail-link:hover {
+  text-decoration: underline;
+}
+
+/*СТРАНИЦА ABOUT*/
+.about-section {
+  padding-bottom: 48px;
+}
+@media (max-width: 576px) {
+  .about-section {
+    padding-bottom: 32px;
+  }
+}
+.about-section .about-card {
+  background: #f2f2f2;
+  border-radius: 24px;
+  padding: 24px;
+}
+@media (max-width: 576px) {
+  .about-section .about-card {
+    border-radius: 16px;
+    padding: 16px;
+  }
+}
+.about-section .about-card .about-date {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #838383;
+  margin-bottom: 8px;
+}
+@media (max-width: 576px) {
+  .about-section .about-card .about-date {
+    font-size: 9px;
+  }
+}
+.about-section .about-card .about-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin-bottom: 28px;
+  font-size: 48px;
+  line-height: 100%;
+  color: #171717;
+}
+@media (max-width: 576px) {
+  .about-section .about-card .about-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.about-section .about-card .about-subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  color: #171717;
+  margin-bottom: 16px;
+}
+@media (max-width: 576px) {
+  .about-section .about-card .about-subtitle {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+}
+.about-section .about-card .about-text {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+.about-section .about-card .about-text strong {
+  font-weight: 700;
+}
+.about-section .about-card .about-link {
+  color: #b88446;
+  text-decoration: underline;
+}
+.about-section .about-card .about-link:hover {
+  text-decoration: underline;
+}
+.about-section .about-card .about-list {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  padding-left: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 0;
+}
+.about-section .about-card .about-list li {
+  margin-bottom: 16px;
+  font-family: "Ubuntu", sans-serif;
+}
+@media (max-width: 576px) {
+  .about-section .about-card .about-list li {
+    margin-bottom: 8px;
+  }
+}
+.about-section .about-card .about-list li:last-child {
+  margin-bottom: 0;
+}
+.about-section .about-card .about-list > li {
+  position: relative;
+  padding-left: 14px;
+  list-style: none;
+}
+.about-section .about-card .about-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #b88446;
+  border-radius: 50%;
+}
+.about-section .about-card .about-list ol {
+  list-style: none;
+  counter-reset: alpha-counter;
+  margin-top: 16px;
+  padding-left: 0;
+}
+@media (max-width: 576px) {
+  .about-section .about-card .about-list ol {
+    margin-top: 8px;
+  }
+}
+.about-section .about-card .about-list ol > li {
+  counter-increment: alpha-counter;
+  position: relative;
+  padding-left: 22px;
+}
+.about-section .about-card .about-list ol > li::before {
+  content: counter(alpha-counter, lower-alpha) ")";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #b88446;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+.about-section .about-card .about-list ol > li ul {
+  list-style: none;
+  margin-top: 16px;
+  padding-left: 0;
+}
+@media (max-width: 576px) {
+  .about-section .about-card .about-list ol > li ul {
+    margin-top: 8px;
+  }
+}
+.about-section .about-card .about-list ol > li ul li {
+  position: relative;
+  padding-left: 22px;
+}
+.about-section .about-card .about-list ol > li ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #b88446;
+  font-weight: bold;
+}
+
+/*СТРАНИЦА 404*/
+.error-404-section {
+  margin-top: 144px;
+  margin-bottom: 48px;
+}
+@media (max-width: 768px) {
+  .error-404-section {
+    margin-top: 90px;
+    margin-bottom: 24px;
+  }
+}
+.error-404-section .error-404-card {
+  background: #f2f2f2;
+  border-radius: 24px;
+  padding: 24px;
+}
+.error-404-section .error-404-number {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-weight: 900;
+  font-size: 260px;
+  line-height: 92%;
+  color: #bfbfbf;
+}
+@media (max-width: 576px) {
+  .error-404-section .error-404-number {
+    font-size: 169px;
+    margin-bottom: 8px;
+  }
+}
+.error-404-section .error-404-title {
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  font-size: 48px;
+  line-height: 100%;
+  color: #171717;
+  margin-bottom: 28px;
+}
+@media (max-width: 576px) {
+  .error-404-section .error-404-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+.error-404-section .error-404-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+}
+@media (max-width: 576px) {
+  .error-404-section .error-404-text {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+.error-404-section .error-404-link {
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #bb8a4d;
+}
+.error-404-section .error-404-link .error-404-arrow {
+  margin-right: 8px;
+}
+.error-404-section .error-404-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 576px) {
+  .error-404-section .error-404-link {
+    font-size: 12px;
+  }
+}
+.error-404-section .btn {
+  background-color: #bb8a4d !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 178%;
+  color: #fff;
+  border-radius: 16px;
+  padding: 8px 16px;
+}
+.error-404-section .btn:hover {
+  background-color: #9b703b !important;
+  color: #fff;
+}
+.error-404-section .btn:active {
+  background-color: #76552d !important;
   color: #fff;
 }
 
