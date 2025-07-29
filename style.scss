@@ -2017,7 +2017,93 @@ body {
   }
 }
 
+/*Страница NEWS-LISTING*/
 
+.news-section {
+  .news-card {
+    padding: 24px 24px 16px 24px;
+    border-radius: 24px;
+    background: #f2f2f2;
+    cursor: pointer;
+    transition: background 0.2s;
+    height: 100%;
+    @media (max-width:  576px) {
+      padding: 8px;
+      border-radius: 16px;}
+
+    &:hover {
+      background: #f0f0f0;
+    }
+
+    &__date {
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+      line-height: 114%;
+      color: #838383;
+      margin-bottom: 8px;
+      @media (max-width:  576px) {
+        font-size: 9px;
+        margin-bottom: 4px;
+      }
+    }
+    &__title {
+      font-family: $font-lato;
+      font-weight: $font-lato-bold;
+      font-size: 20px;
+      line-height: 130%;
+      color: #171717;
+      margin-bottom: 4px;
+      @media (max-width:  576px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .news-banner {
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+
+    }
+  }
+
+  .pagination {
+    .page-item {
+      .page-link {
+        font-family: $font-ubuntu;
+        font-weight: $font-ubuntu-regular;
+        border: none;
+        background: transparent;
+        color: #555;
+        font-size: 16px;
+        margin: 0 16px;
+        @media (max-width:  768px) {
+          margin: 0 8px;
+        }
+        @media (max-width:  576px) {
+          margin: 0 4px;
+        }
+
+        &:hover {
+          background: transparent;
+          color: #000;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &.active .page-link {
+        background: $color-gold;
+        color: #fff;
+        border-radius: 6px;
+        padding: 8px 11px;
+      }
+    }
+  }
+}
 
 
 @media (min-width: 1400px) {
