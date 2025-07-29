@@ -1965,7 +1965,7 @@ body {
   background: transparent;
   color: #000;
   font-size: 16px;
-  margin: 0 8px;
+  margin: 0 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1973,6 +1973,16 @@ body {
   height: 40px;
   border-radius: 6px;
   transition: background 0.3s, color 0.3s;
+}
+@media (max-width: 768px) {
+  .news-section .pagination-custom .page-item .page-link {
+    margin: 0 8px;
+  }
+}
+@media (max-width: 576px) {
+  .news-section .pagination-custom .page-item .page-link {
+    margin: 0 4px;
+  }
 }
 .news-section .pagination-custom .page-item .page-link svg.icon {
   width: 16px;
