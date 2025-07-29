@@ -286,10 +286,17 @@
     </div>
         <!-- Пагинация -->
         <nav class="mt-5">
-            <ul class="pagination justify-content-center">
+            <ul class="pagination justify-content-center pagination-custom">
+                <!-- Prev -->
                 <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">    <img src="img/pagination-arrow-left.svg" alt="Назад"></a>
+                    <a class="page-link page-arrow" href="#" aria-label="Previous">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M11 14L5 8l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </li>
+
+                <!-- Pages -->
                 <li class="page-item active"><a class="page-link" href="#">01</a></li>
                 <li class="page-item"><a class="page-link" href="#">02</a></li>
                 <li class="page-item"><a class="page-link" href="#">03</a></li>
@@ -297,8 +304,14 @@
                 <li class="page-item d-none d-sm-block"><a class="page-link" href="#">05</a></li>
                 <li class="page-item"><a class="page-link" href="#">…</a></li>
                 <li class="page-item"><a class="page-link" href="#">50</a></li>
+
+                <!-- Next -->
                 <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next"> <img src="img/pagination-arrow-right.svg" alt="Вперед"></a>
+                    <a class="page-link page-arrow" href="#" aria-label="Next">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M5 2l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </li>
             </ul>
         </nav>

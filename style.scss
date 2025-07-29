@@ -2069,37 +2069,45 @@ body {
     }
   }
 
-  .pagination {
+  .pagination-custom {
     .page-item {
       .page-link {
         font-family: $font-ubuntu;
         font-weight: $font-ubuntu-regular;
         border: none;
         background: transparent;
-        color: #555;
+        color: #000; // Default текст и стрелка (черные)
         font-size: 16px;
-        margin: 0 16px;
-        @media (max-width:  768px) {
-          margin: 0 8px;
-        }
-        @media (max-width:  576px) {
-          margin: 0 4px;
+        margin: 0 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        transition: background 0.3s, color 0.3s;
+
+        svg.icon {
+          width: 16px;
+          height: 16px;
+          transition: color 0.3s, fill 0.3s;
         }
 
-        &:hover {
-          background: transparent;
-          color: #000;
-        }
         &:focus {
           box-shadow: none;
         }
+
+        // Hover state
+        &:hover {
+          background: #f2f2f2; // серый фон
+          color: #b88446; // золотой цвет текста/иконки
+        }
       }
 
+      // Active state (цифра и стрелка)
       &.active .page-link {
-        background: $color-gold;
-        color: #fff;
-        border-radius: 6px;
-        padding: 8px 11px;
+        background: #b88446; // золотой фон
+        color: #fff; // белый текст и стрелка
       }
     }
   }

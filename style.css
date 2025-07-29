@@ -1958,37 +1958,37 @@ body {
   width: 100%;
   border-radius: 16px;
 }
-.news-section .pagination .page-item .page-link {
+.news-section .pagination-custom .page-item .page-link {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   border: none;
   background: transparent;
-  color: #555;
-  font-size: 16px;
-  margin: 0 16px;
-}
-@media (max-width: 768px) {
-  .news-section .pagination .page-item .page-link {
-    margin: 0 8px;
-  }
-}
-@media (max-width: 576px) {
-  .news-section .pagination .page-item .page-link {
-    margin: 0 4px;
-  }
-}
-.news-section .pagination .page-item .page-link:hover {
-  background: transparent;
   color: #000;
+  font-size: 16px;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
 }
-.news-section .pagination .page-item .page-link:focus {
+.news-section .pagination-custom .page-item .page-link svg.icon {
+  width: 16px;
+  height: 16px;
+  transition: color 0.3s, fill 0.3s;
+}
+.news-section .pagination-custom .page-item .page-link:focus {
   box-shadow: none;
 }
-.news-section .pagination .page-item.active .page-link {
-  background: #bb8a4d;
+.news-section .pagination-custom .page-item .page-link:hover {
+  background: #f2f2f2;
+  color: #b88446;
+}
+.news-section .pagination-custom .page-item.active .page-link {
+  background: #b88446;
   color: #fff;
-  border-radius: 6px;
-  padding: 8px 11px;
 }
 
 @media (min-width: 1400px) {
