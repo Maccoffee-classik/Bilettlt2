@@ -2353,6 +2353,128 @@ body {
   color: #fff;
 }
 
+/*СТРАНИЦА ALL-EVENTS*/
+.all-events .filter-block {
+  margin: 0 10px;
+  background-color: #564dbb;
+  border-radius: 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media (max-width: 500px) {
+  .all-events .filter-block {
+    border-radius: 0 0 16px 16px;
+  }
+}
+.all-events .filter-block h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 133%;
+  color: #fff;
+}
+.all-events .filter-block .form-control:focus {
+  background-color: rgba(70, 66, 66, 0.6);
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+.all-events .filter-block__icon {
+  margin-left: 8px;
+  display: inline-flex !important;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .all-events .filter-block__icon {
+    margin-left: 0px;
+    padding: 4px 2px;
+  }
+}
+@media (max-width: 577px) {
+  .all-events .filter-block__icon {
+    margin-left: auto;
+  }
+}
+.all-events .filter-block__icon.rotated .filter-block__arrow {
+  transform: rotate(180deg);
+}
+.all-events .filter-block__icon .filter-block__arrow {
+  transition: transform 0.3s ease;
+}
+.all-events .filter-block .form-group {
+  margin-right: 1px;
+}
+.all-events .filter-block__filter-placeholder {
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  pointer-events: none;
+  transition: 0.2s;
+  pointer-events: none;
+}
+.all-events .filter-block__filter-placeholder.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.all-events .filter-block input[type=date] {
+  color: transparent;
+}
+.all-events .filter-block__select, .all-events .filter-block__input {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 9px 16px;
+  background: rgba(70, 66, 66, 0.6);
+}
+.all-events .filter-block__input-left {
+  border-radius: 20px 0 0 24px;
+  margin-right: 1px;
+}
+.all-events .filter-block__input-right {
+  border-radius: 0 20px 20px 0;
+}
+.all-events .filter-block__select:focus, .all-events .filter-block__input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.all-events .filter-block__toggle {
+  display: flex;
+  margin-left: auto;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 9px 16px;
+}
+@media (max-width: 768px) {
+  .all-events .filter-block__toggle {
+    font-size: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .all-events .filter-block__toggle {
+    font-size: 14px !important;
+    width: 100%;
+  }
+}
+.all-events .filter-block__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 768px) {
+  .all-events .filter-block .filter-block__extra {
+    flex-wrap: wrap;
+  }
+}
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1600px;

@@ -2484,6 +2484,154 @@ body {
   }
 }
 
+/*СТРАНИЦА ALL-EVENTS*/
+
+.all-events {
+
+  .filter-block {
+    margin: 0 10px;
+    background-color: #564dbb;
+    border-radius: 24px;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media (max-width:  500px) {
+      border-radius: 0 0 16px 16px;
+
+    }
+    h2 {
+      font-family: $font-lato;
+      font-weight: $font-lato-bold;
+      font-size: 36px;
+      line-height: 133%;
+      color: #fff;
+    }
+    .form-control:focus {
+
+      background-color: rgba(70, 66, 66, 0.6);
+      border-color: transparent;
+      outline: 0;
+      box-shadow: none;
+    }
+    &__icon {
+      margin-left: 8px;
+      display: inline-flex!important;
+      align-items: center;
+      @media (max-width: 768px) {
+        margin-left: 0px;
+        padding: 4px 2px;
+
+      }
+      @media (max-width: 577px) {
+        margin-left: auto;
+
+      }
+
+      &.rotated .filter-block__arrow {
+        transform: rotate(180deg);
+      }
+
+      .filter-block__arrow {
+
+        transition: transform 0.3s ease;
+      }
+
+
+    }
+    .form-group {
+      margin-right: 1px;
+    }
+    &__filter-placeholder {
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-white;
+      pointer-events: none;
+      transition: 0.2s;
+      pointer-events: none;
+      &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    input[type="date"] {
+
+      color: transparent; // или нужный цвет текста
+
+    }
+
+
+    &__select,
+    &__input {
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+
+      border: none;
+      color: #fff;
+      border-radius: 20px;
+      padding: 9px 16px;
+      background: rgba(70, 66, 66, 0.6);
+    }
+    &__input-left {
+      border-radius: 20px 0 0 24px;
+      margin-right: 1px;
+
+    }
+    &__input-right {
+      border-radius: 0 20px 20px 0;
+
+    }
+
+    &__select:focus,
+    &__input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &__toggle {
+      display: flex;
+      margin-left: auto;
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+      color: #fff;
+      border: none;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 9px 16px;
+      @media (max-width: 768px) {
+        font-size: 0px;
+      }
+      @media (max-width: 576px) {
+        font-size: 14px!important;
+        width: 100%;
+
+      }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+
+    }
+
+    @media (max-width: 768px) {
+      .filter-block__extra {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
 
 @media (min-width: 1400px) {
   .container {
