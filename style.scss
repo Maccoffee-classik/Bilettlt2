@@ -2497,7 +2497,7 @@ body {
     padding-top: 16px;
     padding-bottom: 16px;
     @media (max-width:  500px) {
-      border-radius: 0 0 16px 16px;
+      border-radius: 16px 16px 16px 16px;
 
     }
     h2 {
@@ -2563,6 +2563,7 @@ body {
     }
 
 
+
     &__select,
     &__input {
       font-family: $font-ubuntu;
@@ -2576,12 +2577,12 @@ body {
       background: rgba(70, 66, 66, 0.6);
     }
     &__input-left {
-      border-radius: 20px 0 0 24px;
+      border-radius: 20px 0 0 24px!important;
       margin-right: 1px;
 
     }
     &__input-right {
-      border-radius: 0 20px 20px 0;
+      border-radius: 0 20px 20px 0!important;
 
     }
 
@@ -2623,12 +2624,290 @@ body {
       }
     }
   }
+/*ДРОПДАУН ФИЛЬТРОВ*/
+  $chip-gray: #767171;
+  $menu-bg:   #f2f2f2;
+  $gold:      #BB8A4D;
+  $text-dark: #222;
+  $white:     #fff;
 
+  .filter-select {
+    .btn-filter {
+      background: $chip-gray;
+      border: 0;
+      text-align: left;
+      position: relative;
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+      border: none;
+      color: #fff;
+      border-radius: 20px;
+      padding: 9px 16px;
+      background: rgba(70, 66, 66, 0.6);
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px; height: 6px;
+        background-image: url("img/chevron-down-white.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0;
+      }
+
+
+      &[aria-expanded="true"]::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &:focus { box-shadow: none; }
+    }
+    .margin-right-1px{
+      margin-right: 1px!important;
+    }
+    .margin-left-1px{
+      margin-left: 1px!important;
+    }
+    .filter-block__input-left {
+      border-radius: 20px 0 0 20px!important;
+      margin-right: 1px;
+    }
+    .filter-block__input-right {
+      border-radius: 0 20px 20px 0!important;
+      margin-left: 1px;
+    }
+
+    .filter-menu {
+      border: 0;
+      border-radius: 16px;
+      padding: 8px 0;
+      background: $menu-bg;
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      max-height: 360px;
+      overflow-y: auto;
+
+      .dropdown-item {
+        position: relative;
+        padding: 14px 44px 14px 18px;
+        font-size: 18px;
+        color: $text-dark;
+
+        &:hover {
+          background: transparent;
+          color: $gold;
+        }
+
+        &.is-selected {
+          color: $text-dark;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 14px; top: 50%;
+            transform: translateY(-50%);
+            width: 16px; height: 16px;
+            background: url("img/chevron-gold.svg")no-repeat center / contain;
+          }
+        }
+      }
+
+      &::-webkit-scrollbar { width: 6px; }
+      &::-webkit-scrollbar-thumb { background: rgba(0,0,0,.15); border-radius: 8px; }
+    }
+  }
+
+  /*ДРОПДАУН ДАТЫ*/
+  $date-btn-bg: #767171;
+  $date-menu-bg: #f2f2f2;
+
+  .date-filter-select {
+    .margin-right-1px{
+      margin-right: 1px!important;
+    }
+    .margin-left-1px{
+      margin-left: 1px!important;
+    }
+    .btn-date-filter {
+
+      border: 0;
+
+      text-align: left;
+      position: relative;
+      background: $chip-gray;
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+      border: none;
+      color: #fff;
+      border-radius: 20px;
+      padding: 9px 16px;
+      background: rgba(70, 66, 66, 0.6);
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 6px;
+        background: url("img/chevron-down-white.svg") no-repeat center/100% 100%;
+      }
+
+      &[aria-expanded="true"]::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+    }
+
+    .date-filter-menu {
+      background: none;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: none;
+      width: 320px;
+      padding: 8px;
+
+      .air-datepicker {
+        --adp-border-radius: 16px;
+        --adp-cell-border-radius: 10px;
+        --adp-background-color: #f2f2f2;
+      }
+    }
+  }
 
 }
 
+/* Кнопка (пилюля) */
 
+.date-filter-select .btn-date-filter::after{
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 6px;
+  background: url("img/chevron-down-white.svg") no-repeat center/100% 100%;
+}
+.date-filter-select .dropdown-menu{ border:0; }
 
+/* Карточка меню */
+.date-filter-menu{
+  background:#f2f2f2; border:0; border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12); padding:8px; width: 328px;
+}
+
+/* ==== Air Datepicker (внутри только нашего меню) ==== */
+.date-filter-menu .air-datepicker{
+  --adp-background-color:#fff;
+  --adp-border-color: transparent;
+  --adp-border-radius:16px;
+  --adp-font-family: 'Ubuntu', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --adp-cell-border-radius: 10px;
+  --adp-color: #222;               /* основной текст */
+  --adp-color-secondary: #9a9a9a;  /* серый (будни/подписи) */
+  --adp-color-other-month: #b9b9b9;/* дни соседних месяцев */
+  --adp-day-name-color: #9a9a9a;
+  --adp-nav-arrow-color: #222;     /* стрелки навигации */
+  --adp-accent-color: #eae7ff;     /* фон выделения */
+  --adp-cell-background-color-selected: #eae7ff;
+  --adp-cell-background-color-in-range: #f3f1ff;
+  --adp-cell-background-color-hover: #f3f1ff;
+  width: 100%;
+}
+
+/* Контейнер календаря */
+.date-filter-menu .air-datepicker {
+  padding: 10px 10px 14px;
+}
+
+/* Заголовок: месяц '25 с маленькой стрелочкой вниз */
+.date-filter-menu .air-datepicker-nav{
+  padding: 6px 4px 8px; align-items: center;
+}
+.date-filter-menu .air-datepicker-nav--title{
+  font-weight: 600; font-size: 18px;
+  display:flex; align-items:center; gap:6px;
+}
+.date-filter-menu .air-datepicker-nav--title i{ font-style: normal; color:#9a9a9a; }
+.date-filter-menu .air-datepicker-nav--action{ width:34px; height:34px; border-radius:10px; }
+.date-filter-menu .air-datepicker-nav--action:hover{ background:#f4f4f8; }
+
+/* Стрелки — тонкие */
+.date-filter-menu .air-datepicker-nav--action svg{
+  width: 26px; height: 26px; stroke-width: 1.8px;
+}
+
+/* Имена дней недели */
+.date-filter-menu .air-datepicker-body--day-names{
+  margin-top: 4px; margin-bottom: 2px;
+}
+.date-filter-menu .air-datepicker-body--day-name{
+  font-weight: 600; color:#9a9a9a;
+}
+/* Суббота/воскресенье красные */
+.date-filter-menu .air-datepicker-body--day-names .air-datepicker-body--day-name:nth-child(6),
+.date-filter-menu .air-datepicker-body--day-names .air-datepicker-body--day-name:nth-child(7){
+  color:#d34b4b;
+}
+
+/* Сетка дней */
+.date-filter-menu .air-datepicker-cell{
+  height: 38px; line-height: 38px; font-size:16px;
+}
+.date-filter-menu .air-datepicker-cell.-other-month-{
+  color: var(--adp-color-other-month);
+}
+.date-filter-menu .air-datepicker-cell.-current-{
+  box-shadow: inset 0 0 0 2px #eee; border-radius: 10px;
+}
+.date-filter-menu .air-datepicker-cell.-selected-,
+.date-filter-menu .air-datepicker-cell.-selected-.-focus-{
+  color:#000; background: var(--adp-cell-background-color-selected);
+}
+.date-filter-menu .air-datepicker-cell.-weekend-{
+  color:#d34b4b;
+}
+
+/* Вид «Месяцы» — сетка 3×4 с капсулой выбранного */
+.date-filter-menu .air-datepicker--content .air-datepicker-months .air-datepicker-cell{
+  height: 44px; line-height: 44px; font-size:18px; font-weight:600;
+}
+.date-filter-menu .air-datepicker--content .air-datepicker-months .air-datepicker-cell.-selected-{
+  background:#eae7ff; color:#000;
+}
+
+/* Вид «Годы» — сетка 4×? с такой же капсулой */
+.date-filter-menu .air-datepicker--content .air-datepicker-years .air-datepicker-cell{
+  height: 48px; line-height: 48px; font-size:18px; font-weight:600;
+}
+.date-filter-menu .air-datepicker--content .air-datepicker-years .air-datepicker-cell.-selected-{
+  background:#eae7ff; color:#000;
+}
+
+/* Нижние отступы и радиусы у «кнопки сегодня» если появится */
+.date-filter-menu .air-datepicker-button{
+  border-radius: 10px;
+}
+
+/* Чуть больше радиуса у выбранной ячейки */
+.date-filter-menu .air-datepicker-cell.-selected-{
+  border-radius: 10px;
+}
+.margin-right-1px{
+  margin-right: 1px!important;
+}
+.margin-left-1px{
+  margin-left: 1px!important;
+}
 
 
 
