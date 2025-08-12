@@ -768,10 +768,13 @@
         </div>
 
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
-            <div class="card vertical-banner">
+            <div class="card vertical-banner" data-href="/sber-card">
+                <div class="vertical-banner__img-wrap">
+                    <img src="img/vertical_banner.png" alt="vertical banner" class="vertical-banner__img">
+                </div>
 
-                    <img  src="img/vertical_banner.png" alt="vertical_banner">
-
+                <!-- только кнопка — отдельная ссылка -->
+                <a href="/sber-card" class="vertical-banner__cta" role="button">Оформить</a>
             </div>
         </div>
 
@@ -947,11 +950,17 @@
             </div>
         </div>
 
-        <div class="col-6 col-12 d-block d-xxl-none">
-            <div class="banner-block">
-                <img  src="img/horisontal_banner2.png" alt="horisontal_banner2">
+        <div class="col-12 d-block d-xxl-none">
+            <div class="banner-block" data-href="/mts-card">
+                <img src="img/horisontal_banner2.png" alt="Баннер МТС" class="banner-block__img">
+
+                <!-- Отдельная кликабельная кнопка -->
+                <a href="/mts-card" class="banner-block__cta" aria-label="Оформить карту">
+                    Оформить карту
+                </a>
             </div>
         </div>
+
 
         <!-- Карточка события -->
         <div class="col-6 col-sm-6 col-md-4 col-lg-3 col">
@@ -1351,9 +1360,10 @@
             const bannerCol = document.createElement("div");
             bannerCol.className = "col-12 banner-container";
             bannerCol.innerHTML = `
-      <div class="banner-block">
-        <img src="img/horisontal_banner.png" class="img-fluid w-100" alt="Баннер">
-      </div>
+      <div class="banner-block" data-href="/mts-card">
+      <img src="img/horisontal_banner.png" alt="Баннер МТС" class="banner-block__img">
+      <a href="/mts-card" class="banner-block__cta" aria-label="Оформить карту">Оформить карту</a>
+    </div>
     `;
             cols[targetIndex - 1].insertAdjacentElement("afterend", bannerCol);
         }
@@ -1483,6 +1493,16 @@
             if (e.target.closest('button')) return;
 
             const url = card.dataset.href;
+            if (url) window.location.href = url;
+        });
+    });
+
+
+    // Переход по ссылке всей карточки/баннера, кроме кликов по кнопке
+    document.querySelectorAll('.event-card, .vertical-banner, .banner-block').forEach(block => {
+        block.addEventListener('click', (e) => {
+            if (e.target.closest('a, button')) return; // не перехватываем клик по CTA
+            const url = block.dataset.href;
             if (url) window.location.href = url;
         });
     });
