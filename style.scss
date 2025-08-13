@@ -186,6 +186,11 @@ $font-lato-bold: 700;
     font-size: 16px;
     line-height: 125%;
     color: #fff;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #fff;
+    }
     @media (max-width:  1300px) {
       margin-right: 12px;
     }
@@ -218,6 +223,41 @@ $font-lato-bold: 700;
     }
     &-arrow {
       margin-left: 0.3rem;
+    }
+  }
+  &__city2 {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+    padding: 8px 16px;
+    @media (max-width:  1300px) {
+      margin-right: 24px;
+    }
+    @media (max-width:  500px) {
+      padding: 3px 8px;
+
+    }
+    &-icon {
+      margin-right: 0.3rem;
+    }
+    .header__city-name2 {
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+      line-height: 114%;
+      color: #fff;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+    .header__city-arrow2 {
+      display: inline-block;
+      transition: transform .3s ease;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
     }
   }
   &__btn {
@@ -357,6 +397,11 @@ $font-lato-bold: 700;
   font-size: 16px;
   line-height: 125%;
   color: #434343;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #434343;
+  }
 }
 .mobile-menu__socials {
   display: flex;
@@ -678,8 +723,40 @@ body {
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
+  }
+  &__submit {
+
+    display: flex;
+    margin: auto;
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    color:#fff;
+    border: none;
+    background: $color-gold;
+    font-size: 14px;
+    line-height: 130%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 9px 16px;
 
 
+    @media (max-width: 768px) {
+      font-size: 0px;
+      border-radius: 16px;
+      padding: 8px 16px;
+      font-size: 18px;
+      line-height: 178%;
+    }
+    @media (max-width: 576px) {
+      font-size: 14px!important;
+      width: 100%;
+
+    }
+    &:hover {
+       background: #9b703b!important;
+    }
   }
 
   @media (max-width: 768px) {
@@ -1272,6 +1349,11 @@ body {
   &__phone {
     font-weight: $font-ubuntu-medium;
     font-size: 16px;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #fff;
+    }
   }
 
   &__title {
@@ -1915,6 +1997,7 @@ body {
   pointer-events: auto;
 }
 .city-modal {
+
   width: 80%;
   background:#f2f2f2;
   padding: 16px 16px 16px 42px;
@@ -1944,6 +2027,38 @@ body {
     background-color: transparent;
   }
 }
+.city-modal2 {
+  z-index: 1200!important;
+  width: 80%;
+  background:#f2f2f2;
+  padding: 16px 16px 16px 42px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px 0 rgba(82, 77, 117, 0.15);
+  font-family: 'Ubuntu', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+  @media (max-width:  768px) {
+    width: calc(100% - 48px);
+  }
+  @media (max-width:  500px) {
+    padding: 7px 7px 7px 7px;
+    width: calc(100% - 8px);
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
 .city-modal__header {
   display: flex;
   justify-content: space-between;
@@ -2002,6 +2117,38 @@ body {
   margin-bottom: 16px;
   @media (max-width:  500px) {
     margin-bottom: 8px;
+  }
+}
+.city-modal__list2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3; // три столбца
+  column-gap: 32px; // отступ между ними
+  max-height: 1848px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @media (max-width:  768px) {
+    columns: 2;
+
+  }
+  @media (max-width:  500px) {
+    column-gap: 8px;
+  }
+}
+.city-modal__list2 li {
+  margin-bottom: 16px;
+  @media (max-width:  500px) {
+    margin-bottom: 8px;
+  }
+}
+.header__city-dropdown2 {
+  .city-modal__city {
+    .city-check-icon {
+      display: none;
+    }
   }
 }
 .city-modal__city {
@@ -2088,6 +2235,48 @@ body {
     }
   }
 }
+.header__city-dropdown2 {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 240px;
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 1050;
+  display: none;
+  padding: 10px 0;
+  font-family: 'Ubuntu', sans-serif;
+
+  &.show {
+    display: block;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      button {
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #171717;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+}
 
 .header__city {
   position: relative;
@@ -2101,8 +2290,99 @@ body {
     }
   }
 }
+.header__city2 {
+  position: relative;
+
+  &-arrow2 {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
 
 .header__city-dropdown {
+   position: absolute;
+   top: 100%;
+   right: 0;
+   width: 180px;
+   max-height: 208px;
+   overflow-y: auto;
+   background: #f2f2f2;
+   border-radius: 4px;
+   padding: 8px 0;
+   z-index: 1000;
+   display: none;
+   border-right: 4px solid #f2f2f2; //
+   border-top: 4px solid #f2f2f2; //
+   border-bottom: 4px solid #f2f2f2; //
+
+
+
+   &.show {
+     display: block;
+   }
+
+   &-list {
+     margin-right: auto;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+
+     li {
+       button {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+         padding: 10px 20px;
+         position: relative;
+         font-size: 14px;
+         font-family: 'Ubuntu', sans-serif;
+         color: #171717;
+         border: none;
+         background: none;
+         cursor: pointer;
+         padding-right: 4px;
+
+         svg {
+           display: none;
+         }
+
+         &.active svg {
+           display: inline-block;
+         }
+
+         &:hover {
+           background-color: #f2f2f2;
+         }
+
+         .check-icon {
+           display: none;
+         }
+       }
+     }
+   }
+
+   // Кастомный скролл
+   &::-webkit-scrollbar {
+     width: 6px;
+
+   }
+
+   &::-webkit-scrollbar-thumb {
+     background-color: #ccc;
+     border-radius: 3px;
+   }
+
+   &::-webkit-scrollbar-track {
+     background-color: transparent;
+   }
+ }
+
+.header__city-dropdown2 {
   position: absolute;
   top: 100%;
   right: 0;
@@ -2180,6 +2460,8 @@ body {
     background-color: transparent;
   }
 }
+
+
 
 /*Страница NEWS-LISTING*/
 
@@ -2627,6 +2909,18 @@ body {
 /*СТРАНИЦА ALL-EVENTS*/
 
 .all-events {
+  .section-index-filter {
+    margin: 0 10px!important;
+    background-color: #564dbb;
+    border-radius: 0 0 24px 24px!important;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    @media (max-width:  500px) {
+      border-radius: 0 0 16px 16px!important;
+
+    }
+  }
+
 
   .filter-block {
     margin: 0 10px;

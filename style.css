@@ -147,6 +147,11 @@
   line-height: 125%;
   color: #fff;
 }
+.header__phone a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
 @media (max-width: 1300px) {
   .header__phone {
     margin-right: 12px;
@@ -184,6 +189,43 @@
 }
 .header__city-arrow {
   margin-left: 0.3rem;
+}
+.header__city2 {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  margin-right: 48px;
+  padding: 8px 16px;
+}
+@media (max-width: 1300px) {
+  .header__city2 {
+    margin-right: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .header__city2 {
+    padding: 3px 8px;
+  }
+}
+.header__city2-icon {
+  margin-right: 0.3rem;
+}
+.header__city2 .header__city-name2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #fff;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.header__city2 .header__city-arrow2 {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.header__city2 .header__city-arrow2.rotate {
+  transform: rotate(180deg);
 }
 .header__btn {
   width: 32px;
@@ -323,6 +365,11 @@
   margin-bottom: 1rem;
   font-size: 16px;
   line-height: 125%;
+  color: #434343;
+}
+.mobile-menu__phone a {
+  text-decoration: none;
+  cursor: pointer;
   color: #434343;
 }
 
@@ -616,6 +663,40 @@ body {
 }
 .filter-block__toggle:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+.filter-block__submit {
+  display: flex;
+  margin: auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  background: #bb8a4d;
+  font-size: 14px;
+  line-height: 130%;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 9px 16px;
+}
+@media (max-width: 768px) {
+  .filter-block__submit {
+    font-size: 0px;
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-size: 18px;
+    line-height: 178%;
+  }
+}
+@media (max-width: 576px) {
+  .filter-block__submit {
+    font-size: 14px !important;
+    width: 100%;
+  }
+}
+.filter-block__submit:hover {
+  background: #9b703b !important;
 }
 @media (max-width: 768px) {
   .filter-block .filter-block__extra {
@@ -1171,6 +1252,11 @@ body {
 .footer__phone {
   font-weight: 500;
   font-size: 16px;
+}
+.footer__phone a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
 }
 .footer__title {
   font-family: "Lato", sans-serif;
@@ -1828,6 +1914,39 @@ body {
   background-color: transparent;
 }
 
+.city-modal2 {
+  z-index: 1200 !important;
+  width: 80%;
+  background: #f2f2f2;
+  padding: 16px 16px 16px 42px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px 0 rgba(82, 77, 117, 0.15);
+  font-family: "Ubuntu", sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .city-modal2 {
+    width: calc(100% - 48px);
+  }
+}
+@media (max-width: 500px) {
+  .city-modal2 {
+    padding: 7px 7px 7px 7px;
+    width: calc(100% - 8px);
+  }
+}
+.city-modal2::-webkit-scrollbar {
+  width: 6px;
+}
+.city-modal2::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+.city-modal2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .city-modal__header {
   display: flex;
   justify-content: space-between;
@@ -1900,6 +2019,42 @@ body {
   .city-modal__list li {
     margin-bottom: 8px;
   }
+}
+
+.city-modal__list2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3;
+  column-gap: 32px;
+  max-height: 1848px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .city-modal__list2 {
+    columns: 2;
+  }
+}
+@media (max-width: 500px) {
+  .city-modal__list2 {
+    column-gap: 8px;
+  }
+}
+
+.city-modal__list2 li {
+  margin-bottom: 16px;
+}
+@media (max-width: 500px) {
+  .city-modal__list2 li {
+    margin-bottom: 8px;
+  }
+}
+
+.header__city-dropdown2 .city-modal__city .city-check-icon {
+  display: none;
 }
 
 .city-modal__city {
@@ -1979,6 +2134,43 @@ body {
   background-color: #f2f2f2;
 }
 
+.header__city-dropdown2 {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 240px;
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 1050;
+  display: none;
+  padding: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+}
+.header__city-dropdown2.show {
+  display: block;
+}
+.header__city-dropdown2-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header__city-dropdown2-list li button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #171717;
+  cursor: pointer;
+}
+.header__city-dropdown2-list li button:hover {
+  background-color: #f2f2f2;
+}
+
 .header__city {
   position: relative;
 }
@@ -1987,6 +2179,17 @@ body {
   transition: transform 0.3s ease;
 }
 .header__city-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.header__city2 {
+  position: relative;
+}
+.header__city2-arrow2 {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.header__city2-arrow2.rotate {
   transform: rotate(180deg);
 }
 
@@ -2050,6 +2253,69 @@ body {
   border-radius: 3px;
 }
 .header__city-dropdown::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.header__city-dropdown2 {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 180px;
+  max-height: 208px;
+  overflow-y: auto;
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 1000;
+  display: none;
+  border-right: 4px solid #f2f2f2;
+  border-top: 4px solid #f2f2f2;
+  border-bottom: 4px solid #f2f2f2;
+}
+.header__city-dropdown2.show {
+  display: block;
+}
+.header__city-dropdown2-list {
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header__city-dropdown2-list li button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  color: #171717;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-right: 4px;
+}
+.header__city-dropdown2-list li button svg {
+  display: none;
+}
+.header__city-dropdown2-list li button.active svg {
+  display: inline-block;
+}
+.header__city-dropdown2-list li button:hover {
+  background-color: #f2f2f2;
+}
+.header__city-dropdown2-list li button .check-icon {
+  display: none;
+}
+.header__city-dropdown2::-webkit-scrollbar {
+  width: 6px;
+}
+.header__city-dropdown2::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+.header__city-dropdown2::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
@@ -2480,6 +2746,18 @@ body {
 .all-events {
   /*ДРОПДАУН ФИЛЬТРОВ*/
   /*ДРОПДАУН ДАТЫ*/
+}
+.all-events .section-index-filter {
+  margin: 0 10px !important;
+  background-color: #564dbb;
+  border-radius: 0 0 24px 24px !important;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 500px) {
+  .all-events .section-index-filter {
+    border-radius: 0 0 16px 16px !important;
+  }
 }
 .all-events .filter-block {
   margin: 0 10px;

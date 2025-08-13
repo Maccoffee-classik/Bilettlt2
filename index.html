@@ -6,6 +6,7 @@
     <title>Bilettlt</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@500;700;900&family=Onest:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.css">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.scss">
@@ -32,7 +33,7 @@
         </div>
         <div class="header__right">
 
-            <div class="header__phone">+7 (8482) 39-89-89</div>
+            <div class="header__phone"> <a href="tel:+78482398989" >+7 (8482) 39-89-89</a></div>
             <div class="header__city">
                 <span class="header__city-icon">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,14 +118,76 @@
 <div class="offcanvas offcanvas-start mobile-menu" tabindex="-1" id="mobileMenu">
     <div class="mobile-menu__header">
         <a href="#" class="mobile-menu__logo"><img src="img/logo-bilettlt.png" alt="Логотип"></a>
-        <div class="mobile-menu__city">
-             <span class="header__city-icon">
+        <div class="header__city2">
+                <span class="header__city-icon2">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2834 1.18962C14.3552 0.787673 15.402 1.83437 15 2.90622L10.7148 14.3333C10.2383 15.6041 8.38923 15.4334 8.15336 14.0969L7.24429 8.94533L2.09276 8.03627C0.756208 7.8004 0.585535 5.95131 1.85631 5.47477L13.2834 1.18962ZM13.7516 2.43805L2.32448 6.7232L7.47596 7.63233C8.02783 7.72967 8.45989 8.16173 8.55729 8.7136L9.46643 13.8651L13.7516 2.43805Z" fill="white" />
                     </svg>
                 </span>
-            <span class="mobile-menu__city-name">Тольятти</span>
-            <span class="mobile-menu__city-arrow">&#9662;</span>
+            <span class="header__city-name2">Тольятти</span>
+            <span class="header__city-arrow2"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M2.8536 4.85535C2.65834 5.0506 2.65834 5.3672 2.8536 5.56245L5.2997 8.00615C5.6903 8.39635 6.3232 8.3962 6.7136 8.00585L9.15875 5.56065C9.35405 5.3654 9.35405 5.0488 9.15875 4.85354C8.9635 4.65828 8.6469 4.65828 8.45165 4.85354L6.35885 6.94635C6.1636 7.14165 5.847 7.1416 5.65175 6.94635L3.56071 4.85535C3.36545 4.66008 3.04886 4.66008 2.8536 4.85535Z" fill="white" />
+                     </svg>
+                </span>
+            <div class="header__city-dropdown2">
+
+                <ul class="header__city-dropdown-list">
+                    <li><button type="button" data-city="Все" class="city-modal__city">Все</button></li>
+                    <li><button type="button" data-city="Артемьевск" class="city-modal__city">Артемьевск</button></li>
+                    <li><button type="button" data-city="Балашиха" class="city-modal__city">Балашиха</button></li>
+                    <li><button type="button" data-city="Брянск" class="city-modal__city">Брянск</button></li>
+                    <li><button type="button" data-city="Бузлук" class="city-modal__city">Бузлук</button></li>
+                    <li><button type="button" data-city="Великий новгород" class="city-modal__city">Великий новгород</button></li>
+                    <li><button type="button" data-city="Волгоград" class="city-modal__city">Волгоград</button></li>
+                    <li><button type="button" data-city="Воскресенск" class="city-modal__city">Воскресенск</button></li>
+                    <li><button type="button" data-city="Димитровград" class="city-modal__city">Димитровград</button></li>
+                    <li><button type="button" data-city="Дмитров" class="city-modal__city">Дмитров</button></li>
+                    <li><button type="button" data-city="Домодедово" class="city-modal__city">Домодедово</button></li>
+                    <li><button type="button" data-city="Екатеринбург" class="city-modal__city">Екатеринбург</button></li>
+                    <li><button type="button" data-city="Жигулевск" class="city-modal__city">Жигулевск</button></li>
+                    <li><button type="button" data-city="Жуковский" class="city-modal__city">Жуковский</button></li>
+                    <li><button type="button" data-city="Зеленоград" class="city-modal__city">Зеленоград</button></li>
+                    <li><button type="button" data-city="Иваново" class="city-modal__city">Иваново</button></li>
+                    <li><button type="button" data-city="Ивантеевка" class="city-modal__city">Ивантеевка</button></li>
+                    <li><button type="button" data-city="Калуга" class="city-modal__city">Калуга</button></li>
+                    <li><button type="button" data-city="Кинель" class="city-modal__city">Кинель</button></li>
+                    <li><button type="button" data-city="Королёв" class="city-modal__city">Королёв</button></li>
+                    <li><button type="button" data-city="Кострома" class="city-modal__city">Кострома</button></li>
+                    <li><button type="button" data-city="Краснодар" class="city-modal__city">Краснодар</button></li>
+                    <li><button type="button" data-city="Магнитогорск" class="city-modal__city">Магнитогорск</button></li>
+                    <li><button type="button" data-city="Москва" class="city-modal__city">Москва</button></li>
+                    <li><button type="button" data-city="Мытищи" class="city-modal__city">Мытищи</button></li>
+                    <li><button type="button" data-city="Наро-Фоминск" class="city-modal__city">Наро-Фоминск</button></li>
+                    <li><button type="button" data-city="Нижний Новгород" class="city-modal__city">Нижний Новгород</button></li>
+                    <li><button type="button" data-city="Нижний Тагил" class="city-modal__city">Нижний Тагил</button></li>
+                    <li><button type="button" data-city="Новокуйбышевск" class="city-modal__city">Новокуйбышевск</button></li>
+                    <li><button type="button" data-city="Новороссийск" class="city-modal__city">Новороссийск</button></li>
+                    <li><button type="button" data-city="Оренбург" class="city-modal__city">Оренбург</button></li>
+                    <li><button type="button" data-city="Отрадный" class="city-modal__city">Отрадный</button></li>
+                    <li><button type="button" data-city="Пенза" class="city-modal__city">Пенза</button></li>
+                    <li><button type="button" data-city="Пермь" class="city-modal__city">Пермь</button></li>
+                    <li><button type="button" data-city="Реутов" class="city-modal__city">Реутов</button></li>
+                    <li><button type="button" data-city="Ростов-на-Дону" class="city-modal__city">Ростов-на-Дону</button></li>
+                    <li><button type="button" data-city="Санкт-Петербург" class="city-modal__city">Санкт-Петербург</button></li>
+                    <li><button type="button" data-city="Смоленск" class="city-modal__city">Смоленск</button></li>
+                    <li><button type="button" data-city="Ставрополь" class="city-modal__city">Ставрополь</button></li>
+                    <li><button type="button" data-city="Сырань" class="city-modal__city">Сырань</button></li>
+                    <li><button type="button" data-city="Тольятти" class="city-modal__city">Тольятти</button></li>
+                    <li><button type="button" data-city="Томск" class="city-modal__city">Томск</button></li>
+                    <li><button type="button" data-city="Тула" class="city-modal__city">Тула</button></li>
+                    <li><button type="button" data-city="Уфа" class="city-modal__city">Уфа</button></li>
+                    <li><button type="button" data-city="Фрязино" class="city-modal__city">Фрязино</button></li>
+                    <li><button type="button" data-city="Химки" class="city-modal__city">Химки</button></li>
+                    <li><button type="button" data-city="Челябинск" class="city-modal__city">Челябинск</button></li>
+                    <li><button type="button" data-city="Череповец" class="city-modal__city">Череповец</button></li>
+                    <li><button type="button" data-city="Чехов" class="city-modal__city">Чехов</button></li>
+                    <li><button type="button" data-city="Щелково" class="city-modal__city">Щелково</button></li>
+                    <li><button type="button" data-city="Электросталь" class="city-modal__city">Электросталь</button></li>
+                    <li><button type="button" data-city="Ярославль" class="city-modal__city">Ярославль</button></li>
+                    <li><button type="button" data-city="Самара" class="city-modal__city">Самара</button></li>
+                </ul>
+
+            </div>
         </div>
         <button type="button" class="mobile-menu__close" data-bs-dismiss="offcanvas" aria-label="Закрыть">&#10005;</button>
     </div>
@@ -136,7 +199,7 @@
         </ul>
     </nav>
     <div class="mobile-menu__footer">
-        <div class="mobile-menu__phone">+7 (8482) 39-89-89</div>
+        <div class="mobile-menu__phone"><a href="tel:+78482398989" >+7 (8482) 39-89-89</a></div>
         <div class="mobile-menu__socials">
             <a href="#" class="mobile-menu__social-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.6646 3.717L2.93461 10.554C1.72461 11.04 1.73161 11.715 2.71261 12.016L7.26461 13.436L17.7966 6.791C18.2946 6.488 18.7496 6.651 18.3756 6.983L9.84261 14.684H9.84061L9.84261 14.685L9.52861 19.377C9.98861 19.377 10.1916 19.166 10.4496 18.917L12.6606 16.767L17.2596 20.164C18.1076 20.631 18.7166 20.391 18.9276 19.379L21.9466 5.151C22.2556 3.912 21.4736 3.351 20.6646 3.717Z" fill="#434343" />
@@ -146,6 +209,9 @@
             </svg></a>
         </div>
     </div>
+
+
+
 </div>
 
 <section class="slider-section">
@@ -218,40 +284,137 @@
 
 
 
-<div class="container">
+<div class="container all-events ">
+
     <!-- Фильтры -->
-    <div class="filter-block bg-purple text-white rounded-bottom-4 py-2 py-sm-3 px-1 px-md-4">
+    <div class="section-index-filter filter-block bg-purple text-white  py-2 py-sm-3 ">
         <div class="container">
             <div class="row g-3 align-items-center filter-block__row">
                 <!-- События -->
                 <div class="col-md-2 col-sm-5 d-none d-sm-block">
-                    <select class="form-select filter-block__select">
-                        <option selected>События</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            События
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu w-100">
+                            <li><a class="dropdown-item is-selected" href="#" data-value="События">События</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Концерты">Концерты</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Спектакли">Спектакли</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Шоу">Шоу</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Детские мероприятия">Детские мероприятия</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Спортивные события">Спортивные события</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Фестивали">Фестивали</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- Площадка -->
                 <div class="col-md-2 col-sm-5 d-none d-sm-block">
-                    <select class="form-select filter-block__select">
-                        <option selected>Площадка</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Площадка
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu ">
+                            <li><a class="dropdown-item" href="#" data-value="Casanova Club">Casanova Club</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Maison club">Maison club</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Бар-клуб МАМОН">Бар-клуб МАМОН</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Веранда ресторана «Амбар»">Веранда ресторана «Амбар»</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Дворец культуры БМЗ">Дворец культуры БМЗ</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="ДК «Тольятти»">ДК «Тольятти»</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="КЦ «Автоград»">КЦ «Автоград»</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="ЛДС «Лада-Арена»">ЛДС «Лада-Арена»</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- Город -->
                 <div class="col-6 col-md-2 d-none d-md-block">
-                    <select class="form-select filter-block__select">
-                        <option selected>Тольятти</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Выберите город
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu w-100">
+                            <li><a class="dropdown-item" href="#" data-value="Артемьевск">Артемьевск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Балашиха">Балашиха</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Брянск">Брянск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Бузлук">Бузлук</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Великий новгород">Великий новгород</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Волгоград">Волгоград</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Воскресенск">Воскресенск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Димитровград">Димитровград</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Дмитров">Дмитров</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Домодедово">Домодедово</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Екатеринбург">Екатеринбург</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Жигулевск">Жигулевск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Жуковский">Жуковский</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Зеленоград">Зеленоград</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Иваново">Иваново</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ивантеевка">Ивантеевка</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Калуга">Калуга</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Кинель">Кинель</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Королёв">Королёв</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Кострома">Кострома</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Краснодар">Краснодар</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Магнитогорск">Магнитогорск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Москва">Москва</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Мытищи">Мытищи</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Наро-Фоминск">Наро-Фоминск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Нижний Новгород">Нижний Новгород</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Нижний Тагил">Нижний Тагил</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Новокуйбышевск">Новокуйбышевск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Новороссийск">Новороссийск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Оренбург">Оренбург</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Отрадный">Отрадный</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Пенза">Пенза</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Пермь">Пермь</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Реутов">Реутов</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ростов-на-Дону">Ростов-на-Дону</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Санкт-Петербург">Санкт-Петербург</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Смоленск">Смоленск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ставрополь">Ставрополь</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Сырань">Сырань</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Тольятти">Тольятти</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Томск">Томск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Тула">Тула</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Уфа">Уфа</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Фрязино">Фрязино</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Химки">Химки</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Челябинск">Челябинск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Череповец">Череповец</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Чехов">Чехов</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Щелково">Щелково</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Электросталь">Электросталь</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ярославль">Ярославль</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Самара">Самара</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- Дата от -->
                 <div class="col-6 col-md-3 d-none d-md-flex">
                     <!-- Дата от -->
-                    <div class="form-group position-relative w-50">
-                    <label for="date-from" class="form-label position-absolute filter-block__filter-placeholder">Дата, с</label>
-                    <input id="date-from" type="date" class="form-control filter-block__input filter-block__input-left" placeholder="Дата, с">
-                    </div>
+                    <div class="form-group position-relative d-flex w-100 ">
+                        <!-- Дата от -->
+                        <div class="dropdown date-filter-select margin-right-1px w-50">
+                            <button class="btn btn-date-filter  filter-block__input-left w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Дата, с
+                            </button>
+                            <div class="dropdown-menu date-filter-menu p-2">
+                                <div class="date-filter__picker"></div>
+                            </div>
+                        </div>
                         <!-- Дата по -->
-                    <div class="form-group position-relative w-50">
-                        <label for="date-to" class="form-label position-absolute filter-block__filter-placeholder">по</label>
-                        <input id="date-to" type="date" class="form-control filter-block__input filter-block__input-right" placeholder="по">
+                        <div class="dropdown date-filter-select margin-left-1px w-50">
+                            <button class="btn btn-date-filter  filter-block__input-right w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                по
+                            </button>
+                            <div class="dropdown-menu date-filter-menu p-2">
+                                <div class="date-filter__picker"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -276,56 +439,197 @@
             <div class="row g-2 g-md-3 mt-1  d-none filter-block__extra">
 
                 <div class="col-12 col-md-2 d-block d-sm-none">
-                    <select class="form-select filter-block__select">
-                        <option selected>События</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            События
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu w-100">
+                            <li><a class="dropdown-item is-selected" href="#" data-value="События">События</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Концерты">Концерты</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Спектакли">Спектакли</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Шоу">Шоу</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Детские мероприятия">Детские мероприятия</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Спортивные события">Спортивные события</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Фестивали">Фестивали</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- Площадка -->
                 <div class="col-12 col-md-2 d-block d-sm-none">
-                    <select class="form-select filter-block__select">
-                        <option selected>Площадка</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Площадка
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu ">
+                            <li><a class="dropdown-item" href="#" data-value="Casanova Club">Casanova Club</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Maison club">Maison club</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Бар-клуб МАМОН">Бар-клуб МАМОН</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Веранда ресторана «Амбар»">Веранда ресторана «Амбар»</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Дворец культуры БМЗ">Дворец культуры БМЗ</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="ДК «Тольятти»">ДК «Тольятти»</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="КЦ «Автоград»">КЦ «Автоград»</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="ЛДС «Лада-Арена»">ЛДС «Лада-Арена»</a></li>
+                        </ul>
+                    </div>
                 </div>
 
 
                 <div class="col-12 col-sm-5 col-md-2 d-block d-md-none">
-                    <select class="form-select filter-block__select">
-                        <option selected>Город</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Выберите город
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu w-100">
+                            <li><a class="dropdown-item" href="#" data-value="Артемьевск">Артемьевск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Балашиха">Балашиха</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Брянск">Брянск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Бузлук">Бузлук</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Великий новгород">Великий новгород</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Волгоград">Волгоград</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Воскресенск">Воскресенск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Димитровград">Димитровград</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Дмитров">Дмитров</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Домодедово">Домодедово</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Екатеринбург">Екатеринбург</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Жигулевск">Жигулевск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Жуковский">Жуковский</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Зеленоград">Зеленоград</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Иваново">Иваново</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ивантеевка">Ивантеевка</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Калуга">Калуга</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Кинель">Кинель</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Королёв">Королёв</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Кострома">Кострома</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Краснодар">Краснодар</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Магнитогорск">Магнитогорск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Москва">Москва</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Мытищи">Мытищи</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Наро-Фоминск">Наро-Фоминск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Нижний Новгород">Нижний Новгород</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Нижний Тагил">Нижний Тагил</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Новокуйбышевск">Новокуйбышевск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Новороссийск">Новороссийск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Оренбург">Оренбург</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Отрадный">Отрадный</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Пенза">Пенза</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Пермь">Пермь</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Реутов">Реутов</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ростов-на-Дону">Ростов-на-Дону</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Санкт-Петербург">Санкт-Петербург</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Смоленск">Смоленск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ставрополь">Ставрополь</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Сырань">Сырань</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Тольятти">Тольятти</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Томск">Томск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Тула">Тула</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Уфа">Уфа</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Фрязино">Фрязино</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Химки">Химки</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Челябинск">Челябинск</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Череповец">Череповец</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Чехов">Чехов</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Щелково">Щелково</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Электросталь">Электросталь</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Ярославль">Ярославль</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Самара">Самара</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-12 col-sm-5 col-md-2  d-md-none d-flex">
                     <!-- Дата от -->
-                    <div class="form-group position-relative w-50">
-                        <label for="date-from" class="form-label position-absolute filter-block__filter-placeholder">Дата, с</label>
-                        <input id="date-from" type="date" class="form-control filter-block__input filter-block__input-left" placeholder="Дата, с">
-                    </div>
-                    <!-- Дата по -->
-                    <div class="form-group position-relative w-50">
-                        <label for="date-to" class="form-label position-absolute filter-block__filter-placeholder">по</label>
-                        <input id="date-to" type="date" class="form-control filter-block__input filter-block__input-right" placeholder="по">
+                    <div class="form-group position-relative d-flex w-100 ">
+                        <!-- Дата от -->
+                        <div class="dropdown date-filter-select margin-right-1px w-50">
+                            <button class="btn btn-date-filter  filter-block__input-left w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Дата, с
+                            </button>
+                            <div class="dropdown-menu date-filter-menu p-2">
+                                <div class="date-filter__picker"></div>
+                            </div>
+                        </div>
+                        <!-- Дата по -->
+                        <div class="dropdown date-filter-select margin-left-1px w-50">
+                            <button class="btn btn-date-filter  filter-block__input-right w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                по
+                            </button>
+                            <div class="dropdown-menu date-filter-menu p-2">
+                                <div class="date-filter__picker"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="col-12 col-sm-5 col-md-2  ">
-                    <div class="form-group position-relative d-flex">
+                    <div class="form-group position-relative d-flex w-100 ">
                         <!-- Цена от -->
-                    <select class="form-select filter-block__select filter-block__input-left">
-                        <option selected>Цена, от</option>
-                    </select>
+                        <div class="dropdown margin-right-1px filter-select w-50">
+                            <button class="btn btn-filter  filter-block__input-left dropdown-toggle w-100" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                Цена, от
+                            </button>
+
+                            <ul class="dropdown-menu filter-menu  ">
+
+                                <li><a class="dropdown-item" href="#" data-value="500">500 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="1000">1 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="1500">1 500 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="2000">2 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="3000">3 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="5000">5 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="10000">10 000 ₽</a></li>
+                            </ul>
+                        </div>
                         <!-- Цена до -->
-                        <select class="form-select filter-block__select filter-block__input-right">
-                            <option selected>до</option>
-                        </select>
+                        <div class="dropdown margin-left-1px filter-select w-50">
+                            <button class="btn btn-filter  filter-block__input-right  dropdown-toggle w-100" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                до
+                            </button>
+
+                            <ul class="dropdown-menu filter-menu ">
+
+                                <li><a class="dropdown-item" href="#" data-value="1000">1 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="1500">1 500 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="2000">2 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="3000">3 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="5000">5 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="10000">10 000 ₽</a></li>
+                                <li><a class="dropdown-item" href="#" data-value="20000">20 000 ₽</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
 
                 <!-- Организатор -->
                 <div class="col-12 col-sm-5 col-md-2 ">
-                    <select class="form-select filter-block__select">
-                        <option selected>Организатор</option>
-                    </select>
+                    <div class="dropdown filter-select">
+                        <button class="btn btn-filter dropdown-toggle w-100" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Организатор
+                        </button>
+
+                        <ul class="dropdown-menu filter-menu w-100">
+                            <li><a class="dropdown-item" href="#" data-value="Live Music Group">Live Music Group</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="StagePro Events">StagePro Events</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Global Show Agency">Global Show Agency</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Арт-Продакшн">Арт-Продакшн</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="EventMaster">EventMaster</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="MusicLife Production">MusicLife Production</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="Театр-Фест">Театр-Фест</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12  col-6 col-md-2 d-block col-md-2">
+                    <button class="btn filter-block__submit w-100 w-md-auto bottom-toggle">Применить    </button>
+
                 </div>
                 <div class="col-12  col-6 col-md-2 d-block d-sm-none">
                     <button class="btn btn-toggle filter-block__toggle w-100 w-md-auto bottom-toggle">Скрыть
@@ -1187,7 +1491,7 @@
             <div class="footer__column col-9 col-md-4 ">
                 <div class="footer__contact d-flex align-items-center mb-4">
                     <img src="img/logo-bilettlt.png" alt="logo" class="footer__logo me-3" width="48" height="48">
-                    <span class="footer__phone">+7 (8482) 39-89-89</span>
+                    <span class="footer__phone"><a href="tel:+78482398989" >+7 (8482) 39-89-89</a></span>
                 </div>
 
             </div>
@@ -1333,10 +1637,18 @@
         </div>
     </div>
 </div>
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/locale/ru.js"></script>
 
 
 <script>
+
+
 
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -1485,6 +1797,66 @@
             }
         });
     });
+    /* ДРОПДАУН ГОРОДОВ — МОБИЛЬНЫЙ */
+    document.addEventListener('DOMContentLoaded', () => {
+        const cityName2  = document.querySelector('.header__city-name2');
+        const arrow2     = document.querySelector('.header__city-arrow2');
+        const dropdown2  = document.querySelector('.header__city-dropdown2');
+        const headerCity2 = document.querySelector('.header__city2');
+        const allCityButtons2 = dropdown2?.querySelectorAll('[data-city]') || [];
+
+        const svgIcon2 = `
+<svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0.666992 4L2.59416 5.92714C2.63442 5.96734 2.69966 5.9674 2.73993 5.92714L7.33366 1.33334"
+        stroke="#BB8A4D" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+        let selectedCity2 = cityName2?.textContent.trim() || '';
+
+        function updateSelectedCity2(city) {
+            selectedCity2 = city;
+            if (cityName2) cityName2.textContent = city;
+
+            allCityButtons2.forEach(btn => {
+                const isMatch = (btn.dataset.city || '').trim() === selectedCity2;
+                btn.classList.toggle('active', isMatch);
+                btn.querySelector('.city-check-icon')?.remove();
+
+                if (isMatch) {
+                    const icon = `<span class="city-check-icon">${svgIcon2}</span>`;
+                    btn.insertAdjacentHTML('beforeend', icon);
+                }
+            });
+        }
+
+        allCityButtons2.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const city = (btn.dataset.city || '').trim();
+                updateSelectedCity2(city);
+                dropdown2?.classList.remove('show');
+                arrow2?.classList.remove('rotate');
+            });
+        });
+
+        // ✅ Клик по всей области .header__city2
+        headerCity2?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown2?.classList.toggle('show');
+            arrow2?.classList.toggle('rotate');
+            updateSelectedCity2(selectedCity2);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.header__city2')) {
+                dropdown2?.classList.remove('show');
+                arrow2?.classList.remove('rotate');
+            }
+        });
+
+        updateSelectedCity2(selectedCity2);
+    });
+
+
 
     /*Переход по ссылке карточек*/
     document.querySelectorAll('.event-card').forEach(card => {
@@ -1496,6 +1868,63 @@
             if (url) window.location.href = url;
         });
     });
+
+
+
+    /*Галочка в фильтрах*/
+    document.querySelectorAll('.filter-select').forEach(drop => {
+        const btn = drop.querySelector('.btn-filter');
+        drop.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+
+                drop.querySelectorAll('.dropdown-item.is-selected')
+                    .forEach(el => el.classList.remove('is-selected'));
+                item.classList.add('is-selected');
+
+                btn.textContent = item.dataset.value || item.textContent.trim();
+            });
+        });
+    });
+
+
+    /*Календарь*/
+    // Русская локаль "встроенно", чтобы не тянуть отдельный ru.js
+    const ruLocale = {
+        days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+        daysShort: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+        today: 'Сегодня',
+        clear: 'Очистить',
+        dateFormat: 'dd.MM.yyyy',
+        timeFormat: 'HH:mm',
+        firstDay: 1
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.date-filter-select').forEach(wrap => {
+            const btn   = wrap.querySelector('.btn-date-filter');
+            const mount = wrap.querySelector('.date-filter__picker');
+            if (!btn || !mount || mount.dataset.inited === '1') return;
+
+            mount.dataset.inited = '1';
+            btn.dataset.placeholder = btn.dataset.placeholder || btn.textContent.trim();
+
+            new AirDatepicker(mount, {
+                inline: true,
+                autoClose: true,
+                locale: ruLocale,              // ← используем локаль из кода
+                dateFormat: 'dd/MM',       // <-- будет 01/06
+                onSelect({ formattedDate }) {
+                    btn.textContent = formattedDate || btn.dataset.placeholder;
+                    bootstrap.Dropdown.getOrCreateInstance(btn).hide();
+                }
+            });
+        });
+    });
+
 
 
     // Переход по ссылке всей карточки/баннера, кроме кликов по кнопке
